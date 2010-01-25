@@ -10,6 +10,7 @@
 <body>
 <div class="container">
 	<div class="header">
+
 	<div class="mwarp">
 		<div class="logo">
 			<a href="#">Bisnis</a>
@@ -18,12 +19,14 @@
 			<ul class="nav">
 				<li><a title="Home" href="#">Home</a></li>
 				<li><a title="Home" href="#">Beli</a></li>
+
 				<li><a title="Home" href="#">Profile</a></li>
 				<li class="pendaftaran"><a title="Home" href="#">Pendaftaran</a></li>
 				<li><a title="Home" href="#">TOS</a></li>
 				<li><a title="Home" href="#">Help</a></li>
 				<li><a title="Home" href="#">Hubungi kami</a></li>
 			</ul>
+
 		</div>
 		<!--END mwarp-->
 		</div>
@@ -33,6 +36,7 @@
 	Prasyarat
 	</div>
 	<div class="cpkanan">
+
 	pendaftaran
 	<form action="" method="post" class="pertanyaan" id="pendaftaran">
 			<ul>
@@ -42,6 +46,7 @@
 			<input type="text" value="" maxlength="255" class="element text medium" name="element_1" id="element_1"> 
 		</div><p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p> 
 		</li>		<li id="li_2" class="">
+
 		<label for="element_2" class="description">ID Password </label>
 		<div>
 			<input type="text" value="" maxlength="255" class="element text medium" name="element_2" id="element_2"> 
@@ -50,6 +55,7 @@
 		<label for="element_5" class="description">Nama Pemilik </label>
 		<span>
 			<input value="" size="8" maxlength="255" class="element text" name="element_5_1" id="element_5_1">
+
 			<label>First</label>
 		</span>
 		<span>
@@ -57,6 +63,7 @@
 			<label>Last</label>
 		</span><p id="guide_5" class="guidelines"><small>Masukan Nama, anda lihat bagian help untuk bantuan lebih lanjut.</small></p> 
 		</li>		<li id="li_3" class="">
+
 		<label for="element_3" class="description">Tentang Bisnis Anda </label>
 		<div>
 			<textarea class="element textarea medium" name="element_3" id="element_3"></textarea> 
@@ -64,6 +71,7 @@
 		</li>		<li id="li_4" class="">
 		<label for="element_4" class="description">Kontak Anda </label>
 		<div>
+
 			<input type="text" value="" maxlength="255" class="element text medium" name="element_4" id="element_4"> 
 		</div><p id="guide_4" class="guidelines"><small>Masukan nomer telpon bisnis anda, kami akan melakukan konfirmasi melalui nomer ini.</small></p> 
 		</li>		<li id="li_6" class="">
@@ -72,6 +80,7 @@
 			<input type="radio" value="1" class="element radio" name="element_6" id="element_6_1">
 		<label for="element_6_1" class="choice">Bronze Partnership</label>
 		<input type="radio" value="2" class="element radio" name="element_6" id="element_6_2">
+
 		<label for="element_6_2" class="choice">Silver Partneship</label>
 		<input type="radio" value="3" class="element radio" name="element_6" id="element_6_3">
 		<label for="element_6_3" class="choice">Gold Partneship</label>
@@ -90,6 +99,7 @@
 		</div>
 		<div class="clear"></div>
 	</div>
+
 	<div class="footer">
 		<!--INFORMASI TAMBAHAN-->
 </div>
