@@ -42,3 +42,115 @@ a img { border: none; }
 ::-moz-selection { background: #ffcc89; color: #222; } 
 
 body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
+
+
+
+.container  {
+margin:20px auto;
+width:960px;}
+
+.mwarp  {
+-moz-box-shadow:0 3px 6px rgba(0, 0, 0, 0.25);
+background:none repeat scroll 0 0 #D71102;
+height:46px;
+margin-bottom:10px;
+width:620px;}
+
+/* Menu */
+
+.logo  {
+background:none repeat scroll 0 0 #444444;
+border-right:1px solid #8B0000;
+display:block;
+float:left;
+line-height:1;
+padding:15px 12px;}
+.logo a {
+color:#FFFFFF;}
+.menu{float:left;}
+/*PENDAFFFFFFFFFFFFFFTARAAAAAAANnnnnnnnnnn*/
+.contentpendaftaran  {
+background:none repeat scroll 0 0 #EF944A;
+border:1px solid #ccc;
+height:450px;
+width:960px;}
+.cpkiri {
+background:none repeat scroll 0 0 #444444;
+float:left;
+height:430px;
+margin:5px;
+padding:5px;
+width:450px;
+color:#fff;
+}
+.cpkanan {
+float:right;
+width:470px;
+padding:5px;
+margin:5px;
+}
+.nav { float: left; line-height: 1; background-color: #D71102; width: 100%;margin-bottom:5px; }
+.nav, .nav * { list-style: none; margin-left: 0; }
+.nav li { float: left; padding: 0; position: relative; }
+.pendaftaran{background:none repeat scroll 0 0 #EF944A;}
+.pendaftaran:hover{background:none repeat scroll 0 0 #EF944A;}
+.nav ul li { width: 100%; background-color: #c81002; }
+
+.nav a { display: block; position: relative; padding: 15px 12px; }
+
+/* Hides items under top menu */
+.nav ul { position: absolute; top: -9999em; width: 20em; /* left offset of submenus need to match (see below) */ }
+
+/* Shows submenus */
+.nav li:hover ul,
+.nav li.nav-hover ul { left: -1px; top: 43px; /* match top ul list item height */ z-index: 99; }
+
+/* Hides all sub items (4 levels deep) */
+.nav li:hover li ul,
+.nav li.nav-hover li ul,
+.nav li li:hover li ul,
+.nav li li.nav-hover li ul,
+.nav li li li:hover li ul,
+.nav li li li.nav-hover li ul { top: -999em; }
+
+/* On :hover, displays all sub items (4 levels deep) */
+.nav li li:hover ul,
+.nav li li.nav-hover ul,
+.nav li li li:hover ul,
+.nav li li li.nav-hover ul,
+.nav li li li li:hover ul,
+.nav li li li li.nav-hover ul { left: 20em; /* match .nav ul width */ top: -1px; }
+
+/* Default Skin */
+.nav {  }
+.nav ul { -moz-box-shadow:0 4px 6px rgba(0, 0, 0, 0.25);-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+filter: progid:DXImageTransform.Microsoft.dropShadow(color=#cacaca, offX=2, offY=2, positive=true); }
+.nav ul li a { }
+.nav li:hover ul,
+.nav li.nav-hover ul { background: #fff; }
+
+.nav a { color: #444;  }
+.nav a:hover { text-decoration: none; }
+.nav ul a { border-right: none; }
+.nav li:hover, .nav li.nav-hover,
+.nav a:focus { background: #c81002; }
+.nav li.nav-hover{
+}
+
+/* Menu bugfix */
+.ie7 .nav:hover { visibility: inherit; /* fixes IE7 'sticky bug' */ }
+
+/* Links */
+a { color: #ccc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.entry-content a:link, .entry-content a:active, .entry-content a:visited { color: #2361a1; text-decoration: underline; }
+.entry-content a:hover { text-decoration: none; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; clear: both; }
+h1 { font-size: 24px; line-height: 28px; padding: 5px 0px; }
+h2 { font-size: 20px; line-height: 22px; padding: 5px 0px; }
+h3 { font-size: 16px; line-height: 20px; padding: 5px 0px; }
+h4 { font-size: 14px; line-height: 18px; padding: 5px 0px; }
+h5 { font-size: 12px; line-height: 18px; padding: 5px 0px; }
+h6 { font-size: 10px; line-height: 16px; }
