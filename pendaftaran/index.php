@@ -37,13 +37,13 @@
 	pendaftaran
 	<form action="" method="post" class="pertanyaan" id="pendaftaran">
 			<ul>
-					<li id="li_1" class="">
-		<label for="element_1" class="description">ID Bisnis </label>
-		<div>
+			<li id="li_1" class="">
+			<label for="element_1" class="description">ID Bisnis </label>
+			<div>
 			<input type="text" value="" maxlength="255" class="element text medium" name="element_1" id="element_1"> 
-		</div><p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p> 
-		</li>		<li id="li_2" class="">
-
+			</div><p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p> 
+		</li>		
+		<li id="li_2" class="">
 		<label for="element_2" class="description">ID Password </label>
 		<div>
 			<input type="text" value="" maxlength="255" class="element text medium" name="element_2" id="element_2"> 
