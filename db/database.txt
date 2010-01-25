@@ -1,0 +1,12 @@
+CREATE TABLE `USERS` (
+  `UserID` int(25) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(60) CHARACTER SET utf8 NOT NULL,
+  `OwnerFn` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `OwnerLn` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `Password` varchar(64) CHARACTER SET utf8 NOT NULL,
+  `Phone` int(15) NOT NULL,
+  `EmailAddress` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `RealAddress` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `Partnership` int(11) NOT NULL,
+  PRIMARY KEY (`UserID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
