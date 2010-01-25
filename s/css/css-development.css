@@ -35,3 +35,10 @@ a img { border: none; }
 
 /* Regular clearing, just in case! */
 .clear { clear: both; }
+
+/*colors
+#FE4365,#FC9D9A - girl power*/
+::selection { background: #ffcc89; color: #222; }
+::-moz-selection { background: #ffcc89; color: #222; } 
+
+body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
