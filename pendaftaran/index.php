@@ -10,7 +10,6 @@
 <body>
 <div class="container">
 	<div class="header">
-
 	<div class="mwarp">
 		<div class="logo">
 			<a href="#">Bisnis</a>
@@ -19,7 +18,6 @@
 			<ul class="nav">
 				<li><a title="Home" href="#">Home</a></li>
 				<li><a title="Home" href="#">Beli</a></li>
-
 				<li><a title="Home" href="#">Profile</a></li>
 				<li class="pendaftaran"><a title="Home" href="#">Pendaftaran</a></li>
 				<li><a title="Home" href="#">TOS</a></li>
@@ -36,7 +34,6 @@
 	Prasyarat
 	</div>
 	<div class="cpkanan">
-
 	pendaftaran
 	<form action="" method="post" class="pertanyaan" id="pendaftaran">
 			<ul>
@@ -99,7 +96,6 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-
 	<div class="footer">
 		<!--INFORMASI TAMBAHAN-->
 </div>
