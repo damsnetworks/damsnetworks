@@ -29,11 +29,11 @@
 		<!--END mwarp-->
 		</div>
 	</div>
-	<div class="contentpendaftaran">
-	<div class="cpkiri">
+	<div class="warppendaftaran">
+	<div class="pendaftaranperaturan">
 	Prasyarat
 	</div>
-	<div class="cpkanan">
+	<div class="pendaftaranisi">
 	pendaftaran
 	<form action="add.php" method="post" class="pertanyaan" id="pendaftaran">
 		<ul>
