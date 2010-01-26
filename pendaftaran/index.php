@@ -59,7 +59,7 @@
 		
 		<li class="">
 		<label class="description">Tentang Bisnis Anda </label>
-		<div><textarea class="element textarea medium" name="element_3" id="element_3"></textarea></div>
+		<div><textarea class="element textarea medium" name="Introduction" id="element_3"></textarea></div>
 		<p id="guide_3" class="guidelines"><small>Masukan kata perkenalan bisnis anda, akan kami gunakan pada halaman bisnis anda.</small></p> 
 		</li>
 		
