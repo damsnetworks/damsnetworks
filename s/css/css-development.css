@@ -108,10 +108,18 @@ width:600px
 .loginbox li {
 width:61%
 }
-
+.admincontrolutama{background:none repeat scroll 0 0 #FFFFFF;
+border:1px solid #CCCCCC;
+height:500px;
+margin:0 auto;
+width:620px;}
 .loginbox ul li:focus {
 background:#FFF7C0
 }
+.adminpengumuman{background:none repeat scroll 0 0 #FFFFE1;
+margin:10px auto;
+padding:10px;
+width:600px;}
 .loginbox{background:none repeat scroll 0 0 #FFFFFF;
 border:1px solid #CCCCCC;
 height:190px;
