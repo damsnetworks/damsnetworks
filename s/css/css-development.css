@@ -84,27 +84,25 @@ color:#FFF
 float:left
 }
 
-.contentpendaftaran {
+.warppendaftaran  {
 background:none repeat scroll 0 0 #F0F0F0;
-border:1px solid #DDD;
-width:960px
-}
+border:1px solid #DDDDDD;
+margin:0 auto;
+width:620px;}
 
-.cpkiri {
-background:none repeat scroll 0 0 #444;
-color:#fff;
-float:left;
+.pendaftaranperaturan  {
+background:none repeat scroll 0 0 #444444;
+color:#FFFFFF;
 height:670px;
 margin:5px;
 padding:5px;
-width:440px;
-}
+width:600px;}
 
-.cpkanan {
+.pendaftaranisi {
 float:right;
 margin:5px;
 padding:5px;
-width:475px
+width:600px
 }
 /*ADMINPAGEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
 .loginbox li {
