@@ -12,17 +12,17 @@
 	<div class="header">
 	<div class="mwarp">
 		<div class="logo">
-			<a href="#">Bisnis</a>
+			<a href="#">dn</a>
 		</div>
 		<div class="menu">
 			<ul class="nav">
-				<li><a title="Home" href="#">Home</a></li>
-				<li><a title="Home" href="#">Beli</a></li>
-				<li><a title="Home" href="#">Profile</a></li>
-				<li class="pendaftaran"><a title="Home" href="#">Pendaftaran</a></li>
+				<li><a title="Home" href="#">HOME</a></li>
+				<li><a title="Home" href="#">BUY</a></li>
+				<li><a title="Home" href="#">PROFILE</a></li>
+				<li class="pendaftaran"><a title="Home" href="#">PENDAFTARAN</a></li>
 				<li><a title="Home" href="#">TOS</a></li>
-				<li><a title="Home" href="#">Help</a></li>
-				<li><a title="Home" href="#">Hubungi kami</a></li>
+				<li><a title="Home" href="#">HELP</a></li>
+				<li><a title="Home" href="#">HUBUNGI KAMI</a></li>
 			</ul>
 
 		</div>
