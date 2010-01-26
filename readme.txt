@@ -17,7 +17,7 @@ versi : 0.1
 directory information
 bisnis.html    -> where bisnis company shows their profile and products
 db/ 	         -> Database stuff :)
-f/ 	         -> Main brain or all the functions is danceing here
+inc/ 	         -> Main brain or all the functions is danceing here
 home.html      -> Main page or index.php ( not yet )
 important.txt 	-> Important secret ( TERMS )
 pendaftaran/ 	-> register/
