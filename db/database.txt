@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `content` (
 
 -
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE IF NOT EXISTS `users` (
   `UserID` int(25) NOT NULL AUTO_INCREMENT,
   `Username` varchar(60) NOT NULL,
   `OwnerFn` varchar(30) NOT NULL,
