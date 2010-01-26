@@ -1,5 +1,5 @@
 <?php 
-include("../f/db.php");
+include("../inc/db.php");
 if(!empty($_POST['Username']) && !empty($_POST['Password']))
 {
   $Username = mysql_real_escape_string($_POST['Username']);
