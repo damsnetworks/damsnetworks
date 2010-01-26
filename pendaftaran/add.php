@@ -12,7 +12,7 @@ if(!empty($_POST['Username']) && !empty($_POST['Password']))
      }
      else
      {
-      $registerquery = mysql_query("INSERT INTO users (Username, OwnerFn, OwnerLn, Password, Phone, Partnership) VALUES('$_POST[Username]','$_POST[OwnerFn]','$_POST[OwnerLn]','$_POST[Password]','$_POST[Phone]','$_POST[Partnership]')");
+      $registerquery = mysql_query("INSERT INTO users (Username, OwnerFn, OwnerLn, Password, Partnership) VALUES('$_POST[Username]','$_POST[OwnerFn]','$_POST[OwnerLn]','$_POST[Password]','$_POST[Partnership]')");
       if($registerquery)
         {
           echo "<h1>Success</h1>";
