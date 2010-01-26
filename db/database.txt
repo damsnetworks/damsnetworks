@@ -1,12 +1,66 @@
-CREATE TABLE `USERS` (
+
+/////////////////////////////////////////////////////////OLD/////////////////////////////
+
+CREATE TABLE IF NOT EXISTS `company` (
   `UserID` int(25) NOT NULL AUTO_INCREMENT,
-  `Username` varchar(60) CHARACTER SET utf8 NOT NULL,
-  `OwnerFn` varchar(30) CHARACTER SET utf8 NOT NULL,
-  `OwnerLn` varchar(30) CHARACTER SET utf8 NOT NULL,
-  `Password` varchar(64) CHARACTER SET utf8 NOT NULL,
+  `Introduction` text NOT NULL,
+  `RealAddress` text NOT NULL,
+  `EmailAddress` varchar(100) NOT NULL,
   `Phone` int(15) NOT NULL,
-  `EmailAddress` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `RealAddress` varchar(100) CHARACTER SET utf8 NOT NULL,
+  KEY `UserID` (`UserID`) <- SEHARUSNYA FOREIGNKEY ?
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `content` (
+  `PostID` int(25) NOT NULL AUTO_INCREMENT,
+  `PostCat` int(11) NOT NULL DEFAULT '0',
+  `Posts` longtext NOT NULL,
+  PRIMARY KEY (`PostID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `UserID` int(25) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(60) NOT NULL,
+  `OwnerFn` varchar(30) NOT NULL,
+  `OwnerLn` varchar(30) NOT NULL,
+  `Password` varchar(64) NOT NULL,
   `Partnership` int(11) NOT NULL,
+  `Status` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`UserID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+/////////////////////////////////////////////////////////NEW/////////////////////////////
+
+
+CREATE TABLE IF NOT EXISTS `company` (
+  `UserID` int(25) NOT NULL AUTO_INCREMENT,
+  `Introduction` text NOT NULL,
+  `RealAddress` text NOT NULL,
+  `EmailAddress` varchar(100) NOT NULL,
+  `Phone` int(15) NOT NULL,
+  FOREIGN KEY (UserID) REFERENCES user(UserID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `content` (
+  `PostID` int(25) NOT NULL AUTO_INCREMENT,
+  `PostCat` int(11) NOT NULL DEFAULT '0',
+  `Posts` longtext NOT NULL,
+  PRIMARY KEY (`PostID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `UserID` int(25) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(60) NOT NULL,
+  `OwnerFn` varchar(30) NOT NULL,
+  `OwnerLn` varchar(30) NOT NULL,
+  `Password` varchar(64) NOT NULL,
+  `Partnership` int(11) NOT NULL,
+  `Status` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`UserID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
