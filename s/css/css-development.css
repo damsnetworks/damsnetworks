@@ -106,7 +106,20 @@ margin:5px;
 padding:5px;
 width:475px
 }
+/*ADMINPAGEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+.loginbox li {
+width:61%
+}
 
+.loginbox ul li:focus {
+background:#FFF7C0
+}
+.loginbox{background:none repeat scroll 0 0 #FFFFFF;
+border:1px solid #CCCCCC;
+height:190px;
+margin:150px auto;
+padding:10px;
+width:450px;}
 form {
 margin:0 0 18px
 }
@@ -662,7 +675,9 @@ width:25%
 input.medium,select.medium {
 width:50%
 }
-
+input.big, select.big {
+width:80%;
+}
 form li.highlighted .guidelines,form li:hover .guidelines {
 visibility:visible
 }
