@@ -49,19 +49,25 @@ background:#FFF url(../img/bgline.png) repeat-x scroll right 180px
 }
 
 .container {
-margin:20px auto;
+margin:0px auto;
 width:960px
 }
 
 .mwarp {
+-moz-border-radius:0 0 4px 4px;
+-webkit-border-radius:0 0 4px 4px;
+border-radius:0 0 4px 4px;
 -moz-box-shadow:0 3px 6px rgba(0,0,0,0.25);-webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
 background:none repeat scroll 0 0 #D71102;filter: progid:DXImageTransform.Microsoft.dropShadow(color=#cacaca, offX=2, offY=2, positive=true);
 height:43px;
-margin-bottom:10px;
-width:620px
+width:620px;
+margin:0 auto 10px;
 }
 
 .logo {
+-moz-border-radius:0 4px 4px 4px;
+-webkit-border-radius:0 4px 4px 4px;
+border-radius:0 4px 4px 4px;
 background:none repeat scroll 0 0 #444;
 border-right:1px solid #8B0000;
 display:block;
@@ -91,14 +97,14 @@ float:left;
 height:670px;
 margin:5px;
 padding:5px;
-width:450px
+width:440px;
 }
 
 .cpkanan {
 float:right;
 margin:5px;
 padding:5px;
-width:470px
+width:475px
 }
 
 form {
@@ -130,7 +136,7 @@ width:100%
 }
 
 .nav a {
-color:#444;
+color:#fff;
 display:block;
 padding:15px 12px;
 position:relative
@@ -370,7 +376,6 @@ border:none;
 color:#222;
 display:block;
 font-size:95%;
-font-weight:700;
 line-height:150%;
 padding:0 0 1px
 }
