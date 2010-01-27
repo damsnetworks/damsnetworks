@@ -40,4 +40,4 @@ email adamramadhan@live.com
 </pre>
 
 ####Database Relations
-![Alt text](/db/README.png)
+![Ver 0.1](db/README.png)
