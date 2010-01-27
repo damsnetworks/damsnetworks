@@ -5,10 +5,16 @@
 .loginbox ul li:focus{background:#FFF7C0}
 .admincontrolutama .box{background:none repeat scroll 0 0 #F0F0F0;margin:5px;padding:10px}
 .adminnews{margin:0 auto;padding:10px;width:900px}
+
+/* Announcements */
 .adminpengumuman{background:none repeat scroll 0 0 #FFFFE1;margin:10px auto;padding:10px;width:900px}
 .adminprivate{background:none repeat scroll 0 0 #FAEBD7;margin:10px auto;padding:10px;width:900px}
+.admininformation{background:none repeat scroll 0 0 #FAEBD7;margin:10px auto;padding:10px;width:900px}
+
 .loginbox{background:none repeat scroll 0 0 #FFF;border:1px solid #CCC;height:190px;margin:102px auto;padding:10px;width:450px}
 form{margin:0 0 18px}
-.admincontrolprofileedit{background:none repeat scroll 0 0 #FFF;border:1px solid #CCC;margin:0 auto;padding:20px;width:880px}
+
+/* Edit.php */
+.admincontrolprofileedit{background:none repeat scroll 0 0 #FFF;border:1px solid #CCC;margin:0 auto;width:920px}
 .admincontrolprofileedit .highlighted{background:#FFFFE1}
 .adminnewsleft,.adminnewsright{float:left;width:300px}

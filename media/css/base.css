@@ -120,7 +120,7 @@ body,input,textarea{font:13px/1.5 "Lucida Grande",Verdana,Arial,"Bitstream Vera 
 #logo,#logo a{color:#000;font-size:28px;font-weight:700;line-height:30px}
 #logo a:hover{color:#2361a1;text-decoration:none}
 #tagline{color:#333}
-input,textarea,button{background:#fafafa;border-color:#aaa #ddd #ddd #aaa;border-style:solid;border-width:1px;color:#444;font-family:Cambria, Georgia, "Times New Roman", Times, serif;font-size:14px;padding:3px}
+	input,textarea,button{background:#fafafa;border-color:#aaa #ddd #ddd #aaa;border-style:solid;border-width:1px;color:#444;font-size:14px;padding:3px}
 button{cursor:pointer;font:12px;padding:2px 10px}
 input:focus,textarea:focus,button:hover{background:#fff;border-color:#777 #ccc #ccc #777}
 .chrome input{padding:1px 3px}
