@@ -16,11 +16,11 @@
 			</div>
 		<div class="menu">
 			<ul class="nav">
-			<li><a title="Home" href="inbox.html">INBOX</a></li>
-			<li><a title="Home" href="edit.html">EDIT PROFILE</a></li>
-			<li><a title="Home" href="product.html">EDIT PRODUCT</a></li>
-			<li><a title="Home" href="help.html">BANTUAN</a></li>
-		</ul>
+			<li><a title="Home" href="inbox.php">INBOX</a></li>
+			<li><a title="Home" href="edit.php">EDIT PROFILE</a></li>
+			<li><a title="Home" href="product.php">EDIT PRODUCT</a></li>
+			<li><a title="Home" href="help.php">BANTUAN</a></li>
+			</ul>
 			<!--END mwarp-->
 		</div>
 	</div>
