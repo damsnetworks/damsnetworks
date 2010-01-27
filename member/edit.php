@@ -6,7 +6,7 @@
 	<meta name="description" content="bisnis indonesia profile perusahaan informasi" />	
 	<link rel="stylesheet" href="../media/css/base.css" type="text/css" />
 	<link rel="stylesheet" href="../media/css/admin.css" type="text/css" />
-		<script src="view.js" type="text/javascript"></script>
+	<script src="view.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="container">
@@ -26,13 +26,18 @@
 		</div>
 	</div>
 <div class="admincontrolprofileedit">
+<div class="admininformation">
+<h2>Informasi</h2>
+<p>Anda dapat mengubah informasi yang berada pada halaman profile company disini,saya adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lorem semper neque viverra at vulputate enim placerat. In ut enim urna. Pellentesque feugiat dapibus posuere.Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
+</div>
 		<form action="add.php" method="post" class="pertanyaan" id="pendaftaran">
 		<ul>
+		
 		</li><li class="">
 		<label class="description">Nama Pemilik</label>
-		<span><input value="$namaFn" size="14" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
+		<span><input value="$namaFn" size="20" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
 		<label>First</label></span>
-		<span><input value="$namaLn" size="14" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
+		<span><input value="$namaLn" size="30" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
 		<label>Last</label></span>
 		<p id="guide_5" class="guidelines"><small>23</small></p> 
 		</li>
