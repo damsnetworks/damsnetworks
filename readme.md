@@ -40,4 +40,4 @@ email adamramadhan@live.com
 </pre>
 
 ####Database Relations
-![Ver 0.1](db/README.png)
+![Ver 0.1](/damsnetworks/damsnetworks/raw/master/db/readme.png)
