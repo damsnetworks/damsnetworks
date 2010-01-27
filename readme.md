@@ -8,9 +8,9 @@
 	\/___/  \/_/\/_/\/_/ \/_/\/_____/\/____/\/__/\/_/ \/___/  \/___/ 
 
 </pre>
-##PENJELASAN
-###KARYA : DAMSNETWORKSBISNIS
-###versi : 0.1
+###PENJELASAN###
+####KARYA : DAMSNETWORKSBISNIS####
+####versi : 0.1####
 
 
 <pre>
@@ -38,3 +38,6 @@ YM damsprivate@yahoo.com
 MSN ask from YM or email ( my msn is sensitive :p )
 email adamramadhan@live.com
 </pre>
+
+####Database Relations
+![Alt text](/db/README.png)
