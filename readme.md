@@ -22,7 +22,7 @@ home.html      -> Main page or index.php ( not yet )
 important.txt 	-> Important secret ( TERMS )
 pendaftaran/ 	-> register/
 readme.txt     -> this text that you are reading right now lol!
-s/             -> styles/
+media/             -> styles/
 unusedcode/    -> old codes for documentations.
 </pre>
 

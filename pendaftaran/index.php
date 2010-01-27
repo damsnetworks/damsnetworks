@@ -4,7 +4,7 @@
 <head>
 	<title>Bisnisku - Indonesian best marketplace</title>
 	<meta name="description" content="bisnis indonesia profile perusahaan informasi" />	
-	<link rel="stylesheet" href="../s/css/css-development.css" type="text/css" />
+<link rel="stylesheet" href="media/css/css-development.css" type="text/css" />
 	<script src="view.js" type="text/javascript"></script>
 </head>
 <body>
