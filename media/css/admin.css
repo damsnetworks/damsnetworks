@@ -5,3 +5,87 @@
  * @subpackage Media
  * @beta
  */
+ 
+.loginbox li {
+width:61%
+}
+
+.admincontrolutama .box .penjelasan {
+-moz-border-radius:4px;
+background:none repeat scroll 0 0 #444;
+color:#FFF;
+padding:5px
+}
+
+.admincontrolutama {
+background:none repeat scroll 0 0 #FFF;
+border:1px solid #CCC;
+height:500px;
+margin:0 auto;
+width:620px
+}
+
+.loginbox ul li:focus {
+background:#FFF7C0
+}
+
+.admincontrolutama .box {
+background:none repeat scroll 0 0 #F0F0F0;
+margin:5px;
+padding:10px
+}
+
+.adminnews {
+margin:0 auto;
+padding:10px;
+width:600px
+}
+
+.adminnewsleft {
+float:left;
+width:300px
+}
+
+.adminnewsright {
+float:left;
+width:300px
+}
+
+.adminpengumuman {
+background:none repeat scroll 0 0 #FFFFE1;
+margin:10px auto;
+padding:10px;
+width:600px
+}
+
+.adminprivate {
+background:none repeat scroll 0 0 #FAEBD7;
+margin:10px auto;
+padding:10px;
+width:600px
+}
+
+.loginbox {
+background:none repeat scroll 0 0 #FFF;
+border:1px solid #CCC;
+height:190px;
+margin:102px auto;
+padding:10px;
+width:450px
+}
+
+form {
+margin:0 0 18px
+}
+
+.admincontrolprofileedit {
+background:none repeat scroll 0 0 #FFFFFF;
+border:1px solid #CCCCCC;
+margin:0 auto;
+padding:20px;
+width:580px;
+}
+
+.admincontrolprofileedit .highlighted{
+background:#FFFFE1;
+}
