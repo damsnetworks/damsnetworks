@@ -1,6 +1,7 @@
 <?php
 include "../inc/db.php";
 include "../inc/functions.php";
+session_start();
 // JIKA UDAH LOGIN
 	if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 	{
@@ -26,7 +27,6 @@ include "../inc/functions.php";
 	{
   	session_start();
 	$row = mysql_fetch_array($loginCheck);
-	
 
 	// Set sessionSebuah = Database[Apa] / MASIH ERROR
  	$_SESSION['sUsername'] = $username;
@@ -64,7 +64,7 @@ else
 			<div class="logo">
 			<a href="#">dn-admin</a>
 			</div>
-
+	<?print_r($_SESSION);?>
 	</div>
 <div class="loginbox">
 <h3>User Login</h3>
