@@ -40,9 +40,8 @@ include "../inc/functions.php";
 	//header('location:admin.php');
 	}
 	else{
-	 echo "<link href=../config/adminstyle.css rel=stylesheet type=text/css>";
-	 echo "<center>Login gagal! username & password tidak benar<br>";
- 	 echo "<a href=index.php><b>ULANGI LAGI</b></a></center>";
+	 echo "<center>GATOT!<br>";
+ 	 echo "<a href=login.php><b>ULANGI LAGI</b></a></center>";
 		}
 	}
 else
