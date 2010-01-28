@@ -1,6 +1,8 @@
 <?php 
-include("../app.php");
+include('../app.php');
 include('../inc/adodb/adodb.inc.php');
+include('../inc/PasswordHash.php.php');
+
 
 $db = ADONewConnection($dbtype);
 $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
@@ -8,8 +10,11 @@ $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 $submit	= (isset($_POST['submit'])) ? true : false;
 $error 	= array(); 
 
+
 $Username = mysql_real_escape_string($_POST['Username']);
-$Password = md5(mysql_real_escape_string($_POST['Password']));
+
+$hash = new PasswordHash(8, FALSE);
+$Password = $hash->HashPassword($_POST['Password']));
 
 // required field
 if(empty($_POST['Username'])
