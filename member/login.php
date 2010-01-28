@@ -1,10 +1,17 @@
 <?php
-include "../inc/db.php";
+include('../inc/adodb/adodb.inc.php');
+include('../inc/PasswordHash.php.php');
 include "../inc/functions.php";
+
 session_start();
+
+$db = ADONewConnection($dbtype);
+$db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
+
+
 // JIKA UDAH LOGIN
-	if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
-	{
+if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
+{
 ?>
 
 	<h1>Member Area</h1>
@@ -15,34 +22,49 @@ session_start();
 	</ul>
 	
 <?php
-	}
+}
 // JIKA BELUM LOGIN
-	elseif(!empty($_POST['Username']) && !empty($_POST['Password']))
+elseif(!empty($_POST['Username']) && !empty($_POST['Password']))
 {
-		$username = sanitize($_POST['Username']);
-		$password = sanitize($_POST['Password']);
-		$loginCheck = mysql_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+	$username = sanitize($_POST['Username']);
+	$password = sanitize($_POST['Password']);
+	 
+	$query = "SELECT UID, Username, Password FROM users WHERE Username = '".$username."'";
+	$row = $db->GetRow($query);
 
 	// Apabila username dan password ditemukan
-	if(mysql_num_rows($loginCheck) == 1)
+	if($row)
 	{
-	$row = mysql_fetch_array($loginCheck);
+		// cek password
+		$hash = new PasswordHash(8, FALSE);
+		
+		if ($hash->CheckPassword($_POST['Password'], $row['Password']));
+		{
+			// Set sessionSebuah = Database[Apa] / MASIH ERROR
+			$_SESSION['sUsername'] = $username;
+			$_SESSION['sLogin'] = 1;
 
-	// Set sessionSebuah = Database[Apa] / MASIH ERROR
- 	$_SESSION['sUsername'] = $username;
-	$_SESSION['sLogin'] = 1;
-
- 	// Redirect
-	// UNTUK CEK GA ERROR
-	echo "<h1>Success</h1>";
-	echo "<p>We are now redirecting you to the member area.</p>";
-	header('location:login.php');
-	}
-	else{
-	 echo "<center>GATOT!<br>";
- 	 echo "<a href=login.php><b>ULANGI LAGI</b></a></center>";
+			// Redirect
+			// UNTUK CEK GA ERROR
+			echo "<h1>Success</h1>";
+			echo "<p>We are now redirecting you to the member area.</p>";
+			header('location:login.php');
+		}
+		else
+		{
+			//todo: login attempt
+			echo "<center>GATOT!<br>";
+			echo "<a href=login.php><b>ULANGI LAGI</b></a></center>";
 		}
 	}
+	
+	else
+	{
+		echo "<center>GATOT!<br>";
+		echo "<a href=login.php><b>ULANGI LAGI</b></a></center>";
+	}
+	
+}
 else
 {
 	?>
