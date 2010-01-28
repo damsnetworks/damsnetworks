@@ -2,7 +2,7 @@
 include "../inc/db.php";
 include "../inc/functions.php";
 // JIKA UDAH LOGIN
-	if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+	if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 	{
 	echo "anda sudah login";
 	}
