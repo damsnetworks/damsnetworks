@@ -6,9 +6,9 @@ session_start();
 	if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 	{
 ?>
-<!-- GA MAU MUNCUL 0,0 -->
+
 	<h1>Member Area</h1>
-	<p>Thanks for logging in! You are <b><?=$_SESSION['sUsername']?></p>
+	<p>Thanks for logging in! You are <b><?php echo $_SESSION['sUsername']?></p>
 	<ul>
 	<li><a href="admin.php">Ke Admin</a></li>
 	<li><a href="logout.php">logout</a></li>
@@ -36,8 +36,7 @@ session_start();
 	// UNTUK CEK GA ERROR
 	echo "<h1>Success</h1>";
 	echo "<p>We are now redirecting you to the member area.</p>";
-	echo "<meta http-equiv='refresh' content='=2;login.php' />";
-	//header('location:admin.php');
+	header('location:login.php');
 	}
 	else{
 	 echo "<center>GATOT!<br>";
