@@ -1,8 +1,13 @@
 <?php
 include "../inc/db.php";
 include "../inc/functions.php";
+// JIKA UDAH LOGIN
+	if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+	{
+	echo "anda sudah login";
+	}
 // JIKA BELUM LOGIN
-	if(!empty($_POST['Username']) && !empty($_POST['Password']))
+	elseif(!empty($_POST['Username']) && !empty($_POST['Password']))
 {
 		$username = sanitize($_POST['Username']);
 		$password = sanitize($_POST['Password']);
@@ -22,8 +27,8 @@ include "../inc/functions.php";
  	$_SESSION['sPartnership']= $r[Partnership];
  	// Redirect
 	// UNTUK CEK GA ERROR
-	//echo "<meta http-equiv='refresh' content='=2;index.php' />";
-	header('location:admin.php');
+	echo "<meta http-equiv='refresh' content='=2;index.php' />";
+	//header('location:admin.php');
 	}
 else{
   echo "<link href=../config/adminstyle.css rel=stylesheet type=text/css>";
