@@ -1,3 +1,39 @@
+<?php
+include "../inc/db.php";
+include "../inc/functions.php";
+// JIKA BELUM LOGIN
+	if(!empty($_POST['Username']) && !empty($_POST['Password']))
+{
+		$username = sanitize($_POST['Username']);
+		$password = sanitize($_POST['Password']);
+		$loginCheck = mysql_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+
+	// Apabila username dan password ditemukan
+	if(mysql_num_rows($loginCheck) == 1)
+	{
+	$r = mysql_fetch_array($loginCheck);
+  	session_start();
+ 	session_register("sUsername");
+ 	session_register("sLogin");
+ 	session_register("sPartnership");
+	// Set sessionSebuah = Database[Apa] / MASIH ERROR
+ 	$_SESSION['sUsername'] = $username;
+	$_SESSION['sLogin'] = 1;
+ 	$_SESSION['sPartnership']= $r[Partnership];
+ 	// Redirect
+	// UNTUK CEK GA ERROR
+	//echo "<meta http-equiv='refresh' content='=2;index.php' />";
+	header('location:admin.php');
+	}
+else{
+  echo "<link href=../config/adminstyle.css rel=stylesheet type=text/css>";
+  echo "<center>Login gagal! username & password tidak benar<br>";
+  echo "<a href=index.php><b>ULANGI LAGI</b></a></center>";
+	}
+}
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -18,7 +54,7 @@
 	</div>
 <div class="loginbox">
 <h3>User Login</h3>
-<form method="post" action="testing.php" id="test" name="test">
+<form method="post" action="login.php" id="test" name="test">
 		<ul>
 		<li class=""><label class="description">ID Bisnis </label>
 		<div><input type="text" value="" maxlength="255" class="element text big" name="Username" id="element_1"></div>
@@ -32,7 +68,7 @@
 		
 		<li class="buttons">
 				<input type="hidden" name="" value="">
-				<input type="submit" id="saveForm" class="button_text" name="submit" value="Submit">
+				<input type="submit" class="button_text" name="submit" value="OK">
 		</li>
 </form>	
 </div>
