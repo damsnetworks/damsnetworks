@@ -27,7 +27,7 @@ include "../inc/functions.php";
  	$_SESSION['sPartnership']= $r[Partnership];
  	// Redirect
 	// UNTUK CEK GA ERROR
-	echo "<meta http-equiv='refresh' content='=2;index.php' />";
+	echo "<meta http-equiv='refresh' content='=2;login.php' />";
 	//header('location:admin.php');
 	}
 else{
