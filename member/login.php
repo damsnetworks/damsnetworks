@@ -4,7 +4,13 @@ include "../inc/functions.php";
 // JIKA UDAH LOGIN
 	if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 	{
-	echo "anda sudah login";
+?>
+	<h1>Member Area</h1>
+	<p>Thanks for logging in! You are <b><?=$_SESSION['sUsername']?></p>
+	<ul>
+	<li><a href="admin.php">Ke Admin</a></li>
+	</ul>
+<?php
 	}
 // JIKA BELUM LOGIN
 	elseif(!empty($_POST['Username']) && !empty($_POST['Password']))
@@ -16,15 +22,12 @@ include "../inc/functions.php";
 	// Apabila username dan password ditemukan
 	if(mysql_num_rows($loginCheck) == 1)
 	{
-	$r = mysql_fetch_array($loginCheck);
   	session_start();
- 	session_register("sUsername");
- 	session_register("sLogin");
- 	session_register("sPartnership");
+
 	// Set sessionSebuah = Database[Apa] / MASIH ERROR
  	$_SESSION['sUsername'] = $username;
 	$_SESSION['sLogin'] = 1;
- 	$_SESSION['sPartnership']= $r[Partnership];
+
  	// Redirect
 	// UNTUK CEK GA ERROR
 	echo "<meta http-equiv='refresh' content='=2;login.php' />";
