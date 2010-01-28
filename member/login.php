@@ -5,11 +5,13 @@ include "../inc/functions.php";
 	if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 	{
 ?>
+<!-- GA MAU MUNCUL 0,0 -->
 	<h1>Member Area</h1>
 	<p>Thanks for logging in! You are <b><?=$_SESSION['sUsername']?></p>
 	<ul>
 	<li><a href="admin.php">Ke Admin</a></li>
 	</ul>
+	
 <?php
 	}
 // JIKA BELUM LOGIN
@@ -23,6 +25,8 @@ include "../inc/functions.php";
 	if(mysql_num_rows($loginCheck) == 1)
 	{
   	session_start();
+	$row = mysql_fetch_array($loginCheck);
+	
 
 	// Set sessionSebuah = Database[Apa] / MASIH ERROR
  	$_SESSION['sUsername'] = $username;
@@ -30,17 +34,20 @@ include "../inc/functions.php";
 
  	// Redirect
 	// UNTUK CEK GA ERROR
+	echo "<h1>Success</h1>";
+	echo "<p>We are now redirecting you to the member area.</p>";
 	echo "<meta http-equiv='refresh' content='=2;login.php' />";
 	//header('location:admin.php');
 	}
-else{
-  echo "<link href=../config/adminstyle.css rel=stylesheet type=text/css>";
-  echo "<center>Login gagal! username & password tidak benar<br>";
-  echo "<a href=index.php><b>ULANGI LAGI</b></a></center>";
+	else{
+	 echo "<link href=../config/adminstyle.css rel=stylesheet type=text/css>";
+	 echo "<center>Login gagal! username & password tidak benar<br>";
+ 	 echo "<a href=index.php><b>ULANGI LAGI</b></a></center>";
+		}
 	}
-}
-?>
-
+else
+{
+	?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -83,3 +90,7 @@ else{
 </div>
 </body>
 </html>
+
+   <?php
+}
+?>
