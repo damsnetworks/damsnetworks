@@ -11,6 +11,7 @@ session_start();
 	<p>Thanks for logging in! You are <b><?=$_SESSION['sUsername']?></p>
 	<ul>
 	<li><a href="admin.php">Ke Admin</a></li>
+	<li><a href="logout.php">logout</a></li>
 	</ul>
 	
 <?php
@@ -25,7 +26,6 @@ session_start();
 	// Apabila username dan password ditemukan
 	if(mysql_num_rows($loginCheck) == 1)
 	{
-  	session_start();
 	$row = mysql_fetch_array($loginCheck);
 
 	// Set sessionSebuah = Database[Apa] / MASIH ERROR
