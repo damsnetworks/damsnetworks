@@ -14,13 +14,31 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 .logo{-moz-border-radius:0 4px 4px;-webkit-border-radius:0 4px 4px 4px;background:none repeat scroll 0 0 #444;border-radius:0 4px 4px 4px;border-right:1px solid #8B0000;display:block;float:left;line-height:1;padding:15px 12px}
 .logo a{color:#FFF}
 .menu{float:left}
+.shadow{filter:progid:DXImageTransform.Microsoft.dropShadow(color=#cacaca,offX=2,offY=2,positive=true);-webkit-box-shadow:0 4px 6px rgba(0,0,0,0.25);-moz-box-shadow:0 3px 6px rgba(0, 0, 0, 0.25);}
+/* HOME */
+.warpHomeAtas{margin:0 auto;width:920px;}
+.warpHomeIsi{border:1px solid #DDDDDD;background:none repeat scroll 0 0 #FFFFFF;height:500px;margin:10px auto;width:920px;}
+.homePendaftaran{background:none repeat scroll 0 0 #FFFFFF;float:left;margin:0 10px 0 0;padding:20px 50px;}
+.homeLogin{background:none repeat scroll 0 0 #FFFFFF;float:left;margin:0 10px 0 0;padding:20px 50px;}
+.homeLogo{background:none repeat scroll 0 0 #FFFFFF;float:left;height:60px;width:565px;}
+.HomeIsi{background:none repeat scroll 0 0 #444444;
+float:left;
+margin:5px;
+padding:5px;
+width:700px;}
+.HomeCat{background:none repeat scroll 0 0 #444444;
+float:left;
+margin:5px;
+padding:5px;
+width:180px;}
+/* PENDAFTARAN */
 .warppendaftaran{width:920px;margin:0 auto;}
-.warppendaftaranlef{background:none repeat scroll 0 0 #fff;float:left;margin:0 10px 0 0;width:138px;}
-.warppendaftaranrig{background:none repeat scroll 0 0 #fff;float:left;margin:0 0 0 10px;width:138px;}
+.warppendaftaranlef{float:left;margin:0 10px 0 0;width:138px;}
+.warppendaftaranrig{float:left;margin:0 0 0 10px;width:138px;}
 .warppendaftaranmid{float:left;background:none repeat scroll 0 0 #fff;border:1px solid #DDD;width:620px}
 .pendaftaranperaturan{background:none repeat scroll 0 0 #444;color:#FFF;height:370px;margin:5px;padding:5px;width:600px}
 .pendaftaranisi{margin:5px;padding:5px;width:600px}
-.box{}
+.box{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #DDDDDD;height:120px;margin:0 0 10px;}
 
 /* Nav & Menus */
 .nav{background-color:#D71102;float:left;line-height:1;margin-bottom:5px;width:100%}
