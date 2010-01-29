@@ -35,6 +35,7 @@ class TMPL
 			<li><a title='Home' href='#'>$seventhMenu</a></li>
 			";
 		}
+	// FUNCTION MENU IN MEMBERS
 	function showMenuMember(
 	$firstMenu = 'INBOX', 
 	$secondMenu = 'EDIT PROFILE', 
@@ -48,6 +49,16 @@ class TMPL
 			<li><a title='Home' href='help.php'>$fourthMenu</a></li>
 			";
 		}
+	// FUNCTION BOX(JUMLAH)
+	function showBox($howMuch)
+	{
+	$i = 1;
+	while($i <= $howMuch)
+		{
+		echo "<div class='box'>wew</div>";
+		$i++;
+		}
+	}
 }
 
 
