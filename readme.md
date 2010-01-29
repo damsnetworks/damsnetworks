@@ -43,6 +43,4 @@ email adamramadhan@live.com
 ![Ver 0.1](/damsnetworks/damsnetworks/raw/master/db/readme.png)
 
 ###Website Wireframe
-![/Home](/damsnetworks/damsnetworks/raw/master/webwireframe/homepage.jpg)
-![/Profile](/damsnetworks/damsnetworks/raw/master/webwireframe/profilepage.jpg)
-![/Pendaftaran](/damsnetworks/damsnetworks/raw/master/webwireframe/pendaftaran.jpg)
+http://github.com/damsnetworks/damsnetworks/tree/master/webwireframe/
