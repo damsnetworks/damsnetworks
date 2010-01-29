@@ -20,10 +20,9 @@ class TMPL
 	$firstMenu = 'HOME', 
 	$secondMenu = 'BUY', 
 	$ThirdMenu = 'PROFILE',
-	$fourthMenu = 'PENDAFTARAN',
-	$fifthMenu ='TOS',
-	$sixthMenu = 'HELP',
-	$seventhMenu='HUBUNGI KAMI')
+	$fourthMenu = 'TOS',
+	$fifthMenu ='HELP',
+	$sixthMenu = 'HUBUNGI KAMI')
 		{
 			echo "
 			<li><a title='Home' href='#'>$firstMenu</a></li>
@@ -32,7 +31,6 @@ class TMPL
 			<li><a title='Home' href='#'>$fourthMenu</a></li>
 			<li><a title='Home' href='#'>$fifthMenu</a></li>
 			<li><a title='Home' href='#'>$sixthMenu</a></li>
-			<li><a title='Home' href='#'>$seventhMenu</a></li>
 			";
 		}
 	// FUNCTION MENU IN MEMBERS
@@ -55,7 +53,7 @@ class TMPL
 	$i = 1;
 	while($i <= $howMuch)
 		{
-		echo "<div class='box'>wew</div>";
+		echo "<div class='box shadow'></div>";
 		$i++;
 		}
 	}
