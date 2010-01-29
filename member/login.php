@@ -40,7 +40,7 @@ elseif(!empty($_POST['Username']) && !empty($_POST['Password']))
 		
 		if ($hash->CheckPassword($_POST['Password'], $row['Password']));
 		{
-			// Set sessionSebuah = Database[Apa] / MASIH ERROR
+
 			$_SESSION['sUsername'] = $username;
 			$_SESSION['sLogin'] = 1;
 

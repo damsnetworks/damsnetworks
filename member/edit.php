@@ -1,3 +1,6 @@
+<?php 
+include "../inc/functions.php";
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -17,11 +20,8 @@
 			</div>
 		<div class="menu">
 			<ul class="nav">
-			<li><a title="Home" href="inbox.php">INBOX</a></li>
-			<li><a title="Home" href="edit.php">EDIT PROFILE</a></li>
-			<li><a title="Home" href="product.php">EDIT PRODUCT</a></li>
-			<li><a title="Home" href="help.php">BANTUAN</a></li>
-		</ul>
+			<?php $showMenu = new TMPL();$showMenu->showMenuMember(); ?>
+			</ul>
 			<!--END mwarp-->
 		</div>
 	</div>
