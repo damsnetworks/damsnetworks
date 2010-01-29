@@ -15,4 +15,4 @@
 ###Website Wireframe
 ![/Home](/damsnetworks/damsnetworks/raw/master/webwireframe/homepage.jpg)
 ![/Profile](/damsnetworks/damsnetworks/raw/master/webwireframe/profilepage.jpg)
-![/Pendaftaran](/damsnetworks/damsnetworks/raw/master/webwireframe/pendaftaran.jpg)
+![/Pendaftaran](/damsnetworks/damsnetworks/raw/master/webwireframe/pendaftaranpage.jpg)
