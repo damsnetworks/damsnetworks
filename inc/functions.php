@@ -11,6 +11,47 @@ lists:
 
 */
 
+//TEMPLATE CLASS
+class TMPL
+{
+
+	// FUNCTION MENU
+	function showMenu(
+	$firstMenu = 'HOME', 
+	$secondMenu = 'BUY', 
+	$ThirdMenu = 'PROFILE',
+	$fourthMenu = 'PENDAFTARAN',
+	$fifthMenu ='TOS',
+	$sixthMenu = 'HELP',
+	$seventhMenu='HUBUNGI KAMI')
+		{
+			echo "
+			<li><a title='Home' href='#'>$firstMenu</a></li>
+			<li><a title='Home' href='#'>$secondMenu</a></li>
+			<li><a title='Home' href='#'>$ThirdMenu</a></li>
+			<li><a title='Home' href='#'>$fourthMenu</a></li>
+			<li><a title='Home' href='#'>$fifthMenu</a></li>
+			<li><a title='Home' href='#'>$sixthMenu</a></li>
+			<li><a title='Home' href='#'>$seventhMenu</a></li>
+			";
+		}
+	function showMenuMember(
+	$firstMenu = 'INBOX', 
+	$secondMenu = 'EDIT PROFILE', 
+	$ThirdMenu = 'EDIT PRODUCT',
+	$fourthMenu = 'BANTUAN')
+		{
+			echo "
+			<li><a title='Home' href='inbox.php'>$firstMenu</a></li>
+			<li><a title='Home' href='edit.php'>$secondMenu</a></li>
+			<li><a title='Home' href='product.php'>$ThirdMenu</a></li>
+			<li><a title='Home' href='help.php'>$fourthMenu</a></li>
+			";
+		}
+}
+
+
+// FUNGSI SANITIZE
 function sanitize($data)
 {
 // remove whitespaces (not a must though)
@@ -27,9 +68,6 @@ function sanitize($data)
 
 		return $data;
 }
-
-
-// end of file
 ?>
 
 
