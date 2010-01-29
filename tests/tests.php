@@ -24,11 +24,21 @@ class TMPL
 		<li><a title='Home' href='#'>$seventhMenu</a></li>
 		";
 	}
+	function box($howMuch)
+	{
+	$i = 1;
+	while($i <= $howMuch)
+		{
+		echo "<div class='box'>wew</div>";
+		$i++;
+		}
+	}
 }
+
 $showMenu = new TMPL();
-$showMenu->showMenu()
+$showMenu->box(10)
 //OVEWRITE
-$showMenu->showMenu('wewe','BUY','PROFILE','PENDAFTARAN','TOS','HELP','HUBUNGI KAMI');
+
 
 
 
