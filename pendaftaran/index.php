@@ -7,7 +7,8 @@ include "../inc/functions.php";
 <head>
 	<title>Bisnisku - Indonesian best marketplace</title>
 	<meta name="description" content="bisnis indonesia profile perusahaan informasi" />	
-<link rel="stylesheet" href="../media/css/css-development.css" type="text/css" />
+	<link rel="stylesheet" href="../media/css/base.css" type="text/css" />
+	<link rel="stylesheet" href="../media/css/admin.css" type="text/css" />
 	<script src="view.js" type="text/javascript"></script>
 </head>
 <body>
@@ -26,9 +27,9 @@ include "../inc/functions.php";
 		<!--END mwarp-->
 		</div>
 	</div>
-	
-
-	<div class="warppendaftaran">
+<div class="warppendaftaran">
+	<div class="warppendaftaranlef"><?php $showBox = new TMPL();$showBox->showBox(5) ?></div>
+	<div class="warppendaftaranmid">
 		<div class="pendaftaranperaturan">
 		Prasyarat
 		</div>
@@ -81,16 +82,19 @@ include "../inc/functions.php";
 			<p id="guide_6" class="guidelines"><small>Pilih salah satu paket, silahkan ke halaman help untuk bantuan lebih lanjut</small></p> 
 			</li>
 
-				<li class="buttons">
-				<input type="hidden" value="" name="" >
-				<input type="submit" value="Submit" name="submit" class="button_text" id="saveForm">
+			<li class="buttons">
+			<input type="hidden" value="" name="" >
+			<input type="submit" value="Submit" name="submit" class="button_text" id="saveForm">
 			</li>
-				</ul>
+			</ul>
 		</form>
-		<!--END RIGHT-->
 		</div>
+	<!-- CLEARING -->
+		</div>
+		<div class="warppendaftaranrig"><?php $showBox = new TMPL();$showBox->showBox(5) ?></div>
 		<div class="clear"></div>
-	</div>
+</div>
+
 	<div class="footer">
 		<!--INFORMASI TAMBAHAN-->
 </div>
