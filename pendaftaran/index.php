@@ -19,7 +19,7 @@ include "../inc/functions.php";
 		</div>
 		<div class="menu">
 			<ul class="nav">
-			<?php $showMenu = new TMPL();$showMenu->showMenuMember(); ?>
+			<?php $showMenu = new TMPL();$showMenu->showMenu(); ?>
 			</ul>
 
 		</div>
