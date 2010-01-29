@@ -21,16 +21,18 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 .homePendaftaran{background:none repeat scroll 0 0 #FFFFFF;float:left;margin:0 10px 0 0;padding:20px 50px;}
 .homeLogin{background:none repeat scroll 0 0 #FFFFFF;float:left;margin:0 10px 0 0;padding:20px 50px;}
 .homeLogo{background:none repeat scroll 0 0 #FFFFFF;float:left;height:60px;width:565px;}
-.HomeIsi{background:none repeat scroll 0 0 #444444;
-float:left;
-margin:5px;
-padding:5px;
-width:700px;}
-.HomeCat{background:none repeat scroll 0 0 #444444;
-float:left;
-margin:5px;
-padding:5px;
-width:180px;}
+.HomeIsi{background:none repeat scroll 0 0 #444444;float:left;margin:5px;padding:5px;width:700px;}
+.HomeCat{background:none repeat scroll 0 0 #444444;float:left;margin:5px;padding:5px;width:180px;}
+
+
+/* companybadge */
+.imasilvermember{background:none repeat scroll 0 0 silver;margin:0 0 10px;padding:20px 80px;}
+.imabronzemember{}
+.imagoldmember{}
+.imarubymember{}
+.imtrusted{margin:0 0 10px;background:none repeat scroll 0 0 #4682B4;border:1px solid #CCCCCC;color:#FFFFFF;padding:50px 54px;}
+.sold5000{background:none repeat scroll 0 0 #D2B48C;padding:38px 60px;}
+
 /* PENDAFTARAN */
 .warppendaftaran{width:920px;margin:0 auto;}
 .warppendaftaranlef{float:left;margin:0 10px 0 0;width:138px;}
@@ -38,7 +40,15 @@ width:180px;}
 .warppendaftaranmid{float:left;background:none repeat scroll 0 0 #fff;border:1px solid #DDD;width:620px}
 .pendaftaranperaturan{background:none repeat scroll 0 0 #444;color:#FFF;height:370px;margin:5px;padding:5px;width:600px}
 .pendaftaranisi{margin:5px;padding:5px;width:600px}
-.box{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #DDDDDD;height:120px;margin:0 0 10px;}
+.partnerandwhybox{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #DDDDDD;height:120px;margin:0 0 10px;}
+
+/* PROFILE */
+.warpprofile{border:1px solid #ccc;background:none repeat scroll 0 0 #444444;height:700px;margin:0 auto;width:920px;}
+.warpprofileabv{background:none repeat scroll 0 0 #fff;height:300px;margin:5px;padding:5px;width:900px;}
+.warpprofilebtm{}
+.companypic{background:none repeat scroll 0 0 #444444;border:1px solid #CCCCCC;float:left;height:287px;padding:5px;width:200px;}
+.companybadge{float:left;margin:0 10px;width:200px;}
+.companyinformations{float:left}
 
 /* Nav & Menus */
 .nav{background-color:#D71102;float:left;line-height:1;margin-bottom:5px;width:100%}
