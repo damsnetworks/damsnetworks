@@ -31,7 +31,7 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 .imagoldmember{}
 .imarubymember{}
 .imtrusted{margin:0 0 10px;background:none repeat scroll 0 0 #4682B4;border:1px solid #CCCCCC;color:#FFFFFF;padding:50px 54px;}
-.sold5000{background:none repeat scroll 0 0 #D2B48C;padding:38px 60px;}
+.sold5000{background:none repeat scroll 0 0 #D2B48C;border:1px solid #CCCCCC;padding:37px 59px;}
 
 /* PENDAFTARAN */
 .warppendaftaran{width:920px;margin:0 auto;}
@@ -43,7 +43,7 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 .partnerandwhybox{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #DDDDDD;height:120px;margin:0 0 10px;}
 
 /* PROFILE */
-.warpprofile{border:1px solid #ccc;background:none repeat scroll 0 0 #444444;height:700px;margin:0 auto;width:920px;}
+.warpprofile{border:1px solid #ccc;background:none repeat scroll 0 0 #fff;height:700px;margin:0 auto;width:920px;}
 .warpprofileabv{background:none repeat scroll 0 0 #fff;height:300px;margin:5px;padding:5px;width:900px;}
 .warpprofilebtm{}
 .companypic{background:none repeat scroll 0 0 #444444;border:1px solid #CCCCCC;float:left;height:287px;padding:5px;width:200px;}
