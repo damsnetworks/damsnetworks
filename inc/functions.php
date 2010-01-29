@@ -53,7 +53,7 @@ class TMPL
 	$i = 1;
 	while($i <= $howMuch)
 		{
-		echo "<div class='box shadow'></div>";
+		echo "<div class='partnerandwhybox shadow'></div>";
 		$i++;
 		}
 	}
