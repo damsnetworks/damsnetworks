@@ -107,7 +107,7 @@ function getUserBrowser()
 	{
 		$sBrowser = "opera";
 	}
-	return $sBrowser;
+	echo $sBrowser;
 } 
 ?>
 
