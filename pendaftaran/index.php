@@ -4,6 +4,8 @@ include $basepath . "inc/functions.php";
 
 $submit	= (isset($_POST['submit'])) ? true : false;
 
+$message = '';
+$error = array();
 if ($submit)
 {
 	include $basepath . "inc/adodb5/adodb.inc.php";
