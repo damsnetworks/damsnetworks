@@ -77,6 +77,38 @@ function sanitize($data)
 
 		return $data;
 }
+// FUNGSI USER BROWSER NANTI DITARO DI BODY SETIAP HALAMAN BIAR TERATUR CSSNYA
+function getUserBrowser()
+{
+	$uBrowser = $_SERVER['HTTP_USER_AGENT'];
+
+	if(preg_match('/MSIE/i',$uBrowser))
+	{
+		$sBrowser = "ie";
+	}
+	elseif(preg_match('/Firefox/i',$uBrowser))
+	{
+		$sBrowser = "firefox";
+	}
+	// Chrome beta pake safari jadi gw taro diatas
+	elseif(preg_match('/Chrome/i',$uBrowser))
+	{
+		$sBrowser = "chrome";
+	}
+	elseif(preg_match('/Safari/i',$uBrowser))
+	{
+		$sBrowser = "safari";
+	}
+	elseif(preg_match('/Flock/i',$uBrowser))
+	{
+		$sBrowser = "flock";
+	}
+	elseif(preg_match('/Opera/i',$uBrowser))
+	{
+		$sBrowser = "opera";
+	}
+	return $sBrowser;
+} 
 ?>
 
 
