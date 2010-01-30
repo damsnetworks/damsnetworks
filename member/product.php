@@ -10,7 +10,7 @@ include "../inc/functions.php";
 	<link rel="stylesheet" href="../media/css/base.css" type="text/css" />
 	<link rel="stylesheet" href="../media/css/admin.css" type="text/css" />
 </head>
-<body>
+<body  class="<?php getUserBrowser() ?>>
 <div class="container">
 	<div class="header">
 		<div class="mwarp">
