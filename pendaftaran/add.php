@@ -1,18 +1,20 @@
-<?php 
+<?php
+// INC  
 include('../app.php');
+include('../inc/functions.php');
 include('../inc/adodb/adodb.inc.php');
 include('../inc/PasswordHash.php.php');
 
-
+// MAKE ADO DB CONNECTIONS
 $db = ADONewConnection($dbtype);
 $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 
 $submit	= (isset($_POST['submit'])) ? true : false;
 $error 	= array(); 
 
+$Username = sanitize($_POST['Username']);
 
-$Username = mysql_real_escape_string($_POST['Username']);
-
+// HASHING PASSWORD
 $hash = new PasswordHash(8, FALSE);
 $Password = $hash->HashPassword($_POST['Password']));
 

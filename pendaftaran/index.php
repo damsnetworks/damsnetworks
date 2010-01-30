@@ -61,12 +61,13 @@ if ($submit)
 	}
 }
 
+// THEME CONTROL
 if ($message)
 {
-	include $basepath . "pendaftaran/style/message.php";
+	include $basepath . "pendaftaran/style/approved/message.php";
 }
 else
 {
-	include $basepath . "pendaftaran/style/register.php";
+	include $basepath . "pendaftaran/style/default/register.php";
 }
 ?>
