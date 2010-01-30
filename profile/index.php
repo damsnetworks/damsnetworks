@@ -11,7 +11,7 @@ include "../inc/functions.php";
 	<link rel="stylesheet" href="../media/css/admin.css" type="text/css" />
 	<script src="view.js" type="text/javascript"></script>
 </head>
-<body>
+<body class="<?php getUserBrowser() ?>">
 <div class="container">
 	<div class="header">
 	<div class="mwarp">
