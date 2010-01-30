@@ -1,102 +1,70 @@
 <?php 
-include "../inc/functions.php";
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<title>Bisnisku - Indonesian best marketplace</title>
-	<meta name="description" content="bisnis indonesia profile perusahaan informasi" />	
-	<link rel="stylesheet" href="../media/css/base.css" type="text/css" />
-	<link rel="stylesheet" href="../media/css/admin.css" type="text/css" />
-	<script src="view.js" type="text/javascript"></script>
-</head>
-<body class="<?php getUserBrowser() ?>">
-<div class="container">
-	<div class="header">
-	<div class="mwarp">
-		<div class="logo">
-			<a href="#">dn</a>
-		</div>
-		<div class="menu">
-			<ul class="nav">
-			<?php $showMenu = new TMPL();$showMenu->showMenu(); ?>
-			</ul>
+include("../app.php");
+include $basepath . "inc/functions.php";
 
-		</div>
-		<!--END mwarp-->
-		</div>
-	</div>
-<div class="warppendaftaran">
-	<div class="warppendaftaranlef"><?php $showBox = new TMPL();$showBox->showBox(5) ?></div>
-	<div class="warppendaftaranmid">
-		<div class="pendaftaranperaturan">
-		Prasyarat
-		</div>
-		<div class="pendaftaranisi">
-		pendaftaran
-		<form action="add.php" method="post" class="pertanyaan" id="pendaftaran">
-			<ul>
-		
-			<li class=""><label class="description">ID Bisnis </label>
-			<div><input type="text" value="" maxlength="60" class="element text medium" name="Username" id="element_1"></div>
-			<p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p> 
-			</li>		
-		
-			<li class="">
-			<label class="description">ID Password </label>
-			<div><input type="password" value="" maxlength="255" class="element text medium" name="Password" id="element_2"></div>
-			<p id="guide_2" class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p> 
-		
-			</li><li class="">
-			<label class="description">Nama Pemilik </label>
-			<span><input value="" size="8" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
-			<label>First</label></span>
-			<span><input value="" size="14" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
-			<label>Last</label></span>
-			<p id="guide_5" class="guidelines"><small>Masukan Nama, anda lihat bagian help untuk bantuan lebih lanjut.</small></p> 
-			</li>
-		
-			<li class="">
-			<label class="description">Tentang Bisnis Anda </label>
-			<div><textarea class="element textarea medium" name="Introduction" id="element_3"></textarea></div>
-			<p id="guide_3" class="guidelines"><small>Masukan kata perkenalan bisnis anda, akan kami gunakan pada halaman bisnis anda.</small></p> 
-			</li>
-		
-			<li class="">
-			<label class="description">Kontak Anda </label>
-			<div><input type="text" value="" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
-			<p id="guide_4" class="guidelines"><small>Masukan nomer telpon bisnis anda, kami akan melakukan konfirmasi melalui nomer ini.</small></p> 
-			</li>		
+$submit	= (isset($_POST['submit'])) ? true : false;
+
+if ($submit)
+{
+	include $basepath . "inc/adodb5/adodb.inc.php";
+	include $basepath . "inc/PasswordHash.php";
 	
-			<li class="">
-			<label class="description">Memberships </label>	
-			<span>
-			<input type="radio" value="1" class="element radio" name="Partnership">
-			<label class="choice">Bronze Partnership</label>
-			<input type="radio" value="2" class="element radio" name="Partnership">
-			<label class="choice">Silver Partneship</label>
-			<input type="radio" value="3" class="element radio" name="Partnership">
-			<label class="choice">Gold Partneship</label>
-			</span>
-			<p id="guide_6" class="guidelines"><small>Pilih salah satu paket, silahkan ke halaman help untuk bantuan lebih lanjut</small></p> 
-			</li>
+	$db = ADONewConnection($dbtype);
+	$db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
+	
+	$username = mysql_real_escape_string($_POST['Username']);
 
-			<li class="buttons">
-			<input type="hidden" value="" name="" >
-			<input type="submit" value="Submit" name="submit" class="button_text" id="saveForm">
-			</li>
-			</ul>
-		</form>
-		</div>
-	<!-- CLEARING -->
-		</div>
-		<div class="warppendaftaranrig"><?php $showBox = new TMPL();$showBox->showBox(5) ?></div>
-		<div class="clear"></div>
-</div>
+	$hash = new PasswordHash(8, FALSE);
+	$password = $hash->HashPassword($_POST['Password']);
+	
+	// required field
+	if(empty($_POST['Username']))
+	{
+		$error[] = "Username field wajib diisi";
+	}
 
-	<div class="footer">
-		<!--INFORMASI TAMBAHAN-->
-</div>
-</body>
-</html>
+	if(empty($_POST['Password']))
+	{
+		$error[] = "Password wajib diisi";
+	}
+
+	// check username availibility
+	$query = "SELECT uid FROM users WHERE username = '".$username."'";
+	$checkusername = $db->GetOne($query);
+	if($checkusername)
+	{
+		$error[] = "Sorry, that username is taken. Please go back and try again.";
+	}
+
+	if (!sizeof($error))
+	{
+
+		// gw comment dulu ;)
+		//mysql_query("INSERT INTO company (Introduction, Phone) VALUES('$_POST[Introduction]','$_POST[Phone]')");
+		
+		// todo: validation field
+		$data['username'] 	= $_POST['Username'];
+		$data['ownerFn'] 	= $_POST['OwnerFn'];
+		$data['ownerLn'] 	= $_POST['OwnerLn'];
+		$data['password'] 	= $hash->HashPassword($_POST['Password']);
+		
+		if($db->AutoExecute('users', $data, 'INSERT'))
+		{
+			$message = "Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.";
+		}
+		else
+		{
+			$message = "<p>Sorry, your registration failed. Please go back and try again.</p>";    
+		}    
+	}
+}
+
+if ($message)
+{
+	include $basepath . "pendaftaran/style/message.php";
+}
+else
+{
+	include $basepath . "pendaftaran/style/register.php";
+}
+?>

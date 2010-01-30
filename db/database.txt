@@ -1,33 +1,66 @@
-CREATE TABLE IF NOT EXISTS `users` (
-  `UID` int(25) NOT NULL AUTO_INCREMENT,
-  `Username` varchar(60) NOT NULL,
-  `OwnerFn` varchar(30) NOT NULL,
-  `OwnerLn` varchar(30) NOT NULL,
-  `Password` varchar(64) NOT NULL,
-  `Partnership` int(11) NOT NULL,
-  `Status` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`UID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+/*
+SQLyog Community- MySQL GUI v8.21 Beta2
+MySQL - 5.1.41 : Database - dams
+*********************************************************************
+*/
 
-CREATE TABLE IF NOT EXISTS `company` (
-  `CID` int(25) NOT NULL AUTO_INCREMENT,
-  `Username` varchar(60) NOT NULL,
-  `Introduction` text NOT NULL,
-  `RealAddress` text NOT NULL,
-  `EmailAddress` varchar(100) NOT NULL,
-  `Phone` int(15) NOT NULL,
-  PRIMARY KEY (`CID`),
-  FOREIGN KEY (Username) REFERENCES users(Username) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-CREATE TABLE IF NOT EXISTS `content` (
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`dams` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+/*Table structure for table `company` */
+
+DROP TABLE IF EXISTS `company`;
+
+CREATE TABLE `company` (
+  `cid` int(25) NOT NULL AUTO_INCREMENT,
+  `companyName` varchar(60) NOT NULL,
+  `introduction` text NOT NULL,
+  `companyAddress` text NOT NULL,
+  `companyEmail` varchar(100) NOT NULL,
+  `companyPhone` int(15) NOT NULL,
+  PRIMARY KEY (`cid`),
+  KEY `Username` (`companyName`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+/*Table structure for table `content` */
+
+DROP TABLE IF EXISTS `content`;
+
+CREATE TABLE `content` (
   `PID` int(25) NOT NULL AUTO_INCREMENT,
   `Username` varchar(60) NOT NULL,
   `PostCat` int(11) NOT NULL DEFAULT '0',
   `Posts` longtext NOT NULL,
   PRIMARY KEY (`PID`),
-  FOREIGN KEY (Username) REFERENCES users(Username) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  KEY `Username` (`Username`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+/*Table structure for table `users` */
 
+DROP TABLE IF EXISTS `users`;
 
+CREATE TABLE `users` (
+  `uid` int(25) NOT NULL AUTO_INCREMENT,
+  `username` varchar(60) NOT NULL,
+  `useremail` varchar(25) DEFAULT NULL,
+  `ownerFn` varchar(30) NOT NULL,
+  `ownerLn` varchar(30) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `partnership` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `type` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`uid`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
