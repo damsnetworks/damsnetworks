@@ -26,10 +26,7 @@ include "../inc/functions.php";
 		</div>
 	</div>
 <div class="admincontrolprofileedit">
-<div class="admininformation">
-<h2>Informasi</h2>
-<p>Anda dapat mengubah informasi yang berada pada halaman profile company disini,saya adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lorem semper neque viverra at vulputate enim placerat. In ut enim urna. Pellentesque feugiat dapibus posuere.Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
-</div>
+<?php $showAnnouncement = new INFO();$showAnnouncement->what('editprofile'); ?>
 		<form action="add.php" method="post" class="pertanyaan" id="pendaftaran">
 		<ul>
 		

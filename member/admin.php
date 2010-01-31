@@ -25,15 +25,11 @@ include "../inc/functions.php";
 		</div>
 	</div>
 <div class="admincontrolutama">
-	<div class="adminpengumuman">
-	<h3>Pengumuman!</h3>
-	<p>Admin berkata, saya adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lorem semper neque viverra at vulputate enim placerat.
-	In ut enim urna. Pellentesque feugiat dapibus posuere.Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
-	</div>
-	<div class="adminprivate">
-	<h3>Segera hubungi billing</h3>
-	<p>Admin berkata, Account bapak $anda akan segera habis. Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
-	</div>
+<?php 
+$showAnnouncement = new INFO();$showAnnouncement->what('admin');
+$showPrivateFromAdmin = new INFO();$showPrivateFromAdmin->billing(1);
+?>
+
 	<div class="adminnews">
 	<h3>Apa yang terjadi?</h3>	
 		<div class="adminnewsright">	
