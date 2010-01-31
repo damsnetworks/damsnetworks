@@ -57,6 +57,21 @@ class TMPL
 		$i++;
 		}
 	}
+	/*FUNCTION BOX HORZONTAL(JUMLAH,MAXKEKANAN)
+	function showProduct($box,$maxBoxRight)
+	{
+	$i = 0;
+		while($i => $box)
+			{
+			echo "<div class='warpproductbox'>"
+				if{$i >= $maxBoxRight)
+				echo "<div class='productbox shadow'></div>";
+				$i = 0;
+				}
+			$i++;
+			echo "</div>";
+			}
+	}*/
 }
 
 
@@ -166,6 +181,8 @@ class INFO
 			}
 		}
 }
+
+
 ?>
 
 
