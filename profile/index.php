@@ -34,10 +34,10 @@ include "../inc/functions.php";
 		</div>
 		<div class="companybadge">
 			<div class="imasilvermember">
-				SILVER
+				{PIC MEMBER SILVER}
 			</div>
 			<div class="imtrusted">
-				BBB TRUSTED
+				{PIC MEMBER VERIVIKASI TRUSTED}
 			</div>
 			<div class="sold5000">
 				SOLD 5000$
@@ -48,7 +48,23 @@ include "../inc/functions.php";
 		</div>
 	</div>
 	<div class="warpprofilebtm">
-	
+		<div class="companyproducts">
+			<div class="warpproductbox">
+				<div class='productbox shadow'>1</div>
+				<div class='productbox shadow'>2</div>
+				<div class='productbox shadow'>3</div>
+				<div class='productbox shadow'>4</div>
+				<div class="clear"></div>
+			</div>
+			<div class="warpproductbox">
+				<div class='productbox shadow'>5</div>
+				<div class='productbox shadow'>6</div>
+				<div class='productbox shadow'>7</div>
+				<div class='productbox shadow'>8</div>
+				<div class="clear"></div>	
+			</div>
+		</div>
+		</div>
 	</div>
 </div>
 
