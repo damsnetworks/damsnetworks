@@ -14,7 +14,7 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 .logo{-moz-border-radius:0 4px 4px;-webkit-border-radius:0 4px 4px 4px;background:none repeat scroll 0 0 #444;border-radius:0 4px 4px 4px;border-right:1px solid #8B0000;display:block;float:left;line-height:1;padding:15px 12px}
 .logo a{color:#FFF}
 .menu{float:left}
-.4pxcorners{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
+.corners4px{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
 .shadow{filter:progid:DXImageTransform.Microsoft.dropShadow(color=#cacaca,offX=2,offY=2,positive=true);-webkit-box-shadow:0 4px 6px rgba(0,0,0,0.25);-moz-box-shadow:0 3px 6px rgba(0, 0, 0, 0.25);}
 /* HOME */
 .warpHomeAtas{margin:0 auto;width:920px;}
@@ -27,9 +27,7 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 
 /* ICON ERROR */
 .iconerror{background:url("../img/megaphone.gif") no-repeat scroll 0 0 transparent;}
-.iconerror p{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;background:none repeat scroll 0 0 #444444;color:#FFFFFF;margin-left:30px;padding:2px 10px;width:510px;}
-
-width:39px;}
+.iconerror p{background:none repeat scroll 0 0 #444444;color:#FFFFFF;margin-left:30px;padding:2px 10px;width:550px;}
 /* FOOTER */
 .footer{margin:0px auto;width:920px;}
 
@@ -51,28 +49,16 @@ width:39px;}
 .pendaftaranisi{width:600px}
 .partnerandwhybox{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #DDDDDD;height:120px;margin:0 0 10px;}
 .pendaftaranerror{color:#444444;padding:10px;width:600px;}
-.pendaftaranerror li{text-align:center;list-style:none outside none;background:none repeat scroll 0 0 #D71102;color:#FFFFFF;list-style:none outside none;margin:3px 0;padding:0 5px;}
+.pendaftaranerror li{text-align:center;list-style:none outside none;background:none repeat scroll 0 0 #D71102;color:#FFFFFF;list-style:none outside none;margin:3px 0;padding:2px 5px;}
 
 /* PENDAFTARAN SUKSES */
 .pendaftaranterimakasih{background:none repeat scroll 0 0 #444444;color:#FFFFFF;height:50px;margin:5px;padding:5px;width:900px;}
 .awarppendaftaranmid{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #DDDDDD;width:920px;}
 .apendaftaransponsor{height:300px;width:900px;}
 .apendaftaranmessagesbox{background:none repeat scroll 0 0 #444444;color:#FFFFFF;height:50px;margin:5px;padding:5px;width:900px;}
-.atohome{background:none repeat scroll 0 0 #CCCCCC;
-float:left;
-height:100px;
-margin:10px 10px 20px 0;
-width:200px;}
-.asambilmenunggu{background:none repeat scroll 0 0 #CCCCCC;
-float:left;
-height:100px;
-margin:10px 10px 20px 0;
-width:350px;}
-.atipsdantriks{background:none repeat scroll 0 0 #CCCCCC;
-float:left;
-height:100px;
-margin:10px 0 20px;
-width:350px;}
+.atohome{background:none repeat scroll 0 0 #CCCCCC;float:left;height:100px;margin:10px 10px 20px 0;width:200px;}
+.asambilmenunggu{background:none repeat scroll 0 0 #CCCCCC;float:left;height:100px;margin:10px 10px 20px 0;width:350px;}
+.atipsdantriks{background:none repeat scroll 0 0 #CCCCCC;float:left;height:100px;margin:10px 0 20px;width:350px;}
 
 
 
