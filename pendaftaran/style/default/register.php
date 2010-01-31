@@ -12,11 +12,11 @@ include "header.php";
 			{
 			?>
 			<div class="pendaftaranerror">
-			<div class="iconerror 4pxcorners"><p>Error! nih, coba dicek lagi ya, kalo ada yang tidak dimengerti <a href="#">hubungi</a> kami ya!</p></li>				</div>
+			<div class="iconerror"><p class='corners4px'>Error! nih, coba dicek lagi ya, kalo ada yang tidak dimengerti <a href="#">hubungi</a> kami ya!</p></li>				</div>
 			<ul>
 			<?php foreach ($error as $errors)
 			{ ?>
-			<li><?php echo $errors; ?></li>					
+			<li class="corners4px"><?php echo $errors; ?></li>					
 			<?php } ?>
 			</div>
 			<?php } ?>
