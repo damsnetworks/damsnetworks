@@ -109,6 +109,63 @@ function getUserBrowser()
 	}
 	echo $sBrowser;
 } 
+
+// FUNGSI PENGUMUMAN DAN INFO DI HALAMAM MEMBER
+class INFO
+{
+
+	// FUNCTION what menjelaskan apa fungsi halaman ini
+	function what($type='tidakada')
+		{
+		// ADMIN.PHP
+		if($type == 'admin')
+			{
+				echo '
+				<div class="adminpengumuman">
+				<h3>Pengumuman!</h3>
+				<p>Admin berkata, saya adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lorem semper neque viverra at vulputate enim placerat.
+				In ut enim urna. Pellentesque feugiat dapibus posuere.Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
+				</div>';
+			}
+		// EDIT.PHP
+		elseif($type == 'editprofile')
+			{
+				echo '
+				<div class="admininformation">
+				<h2>Informasi</h2>
+				<p>Anda dapat mengubah informasi yang berada pada halaman profile company disini,saya adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lorem semper neque viverra at vulputate enim placerat. In ut enim urna. Pellentesque feugiat dapibus posuere.Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
+				</div>';
+			}
+		elseif($type == 'editproducts')
+			{
+				echo '
+				<div class="admininformation">
+				<h2>Informasi</h2>
+				<p>Anda dapat menambah product yang berada pada halaman profile company disini,saya adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lorem semper neque viverra at vulputate enim placerat. In ut enim urna. Pellentesque feugiat dapibus posuere.Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
+				</div>';
+			}
+		elseif($type='tidakada')
+			{
+				echo 'tidak ada penjelasan';
+			}
+		}
+	// FUNCTION MENU IN MEMBERS
+	function billing($type)
+		{
+			if($type = 1)
+			{
+				echo '
+				<div class="adminprivate">
+				<h3>Segera hubungi billing</h3>
+				<p>Admin berkata, Account bapak $anda akan segera habis. Donec tincidunt nisl vitae sem luctus facilisis. Pellentesque quis varius diam.</p>
+				</div>';
+			}
+			else
+			{
+				echo 'blm ada';
+			}
+		}
+}
 ?>
 
 
