@@ -24,7 +24,7 @@ include "header.php";
 			<div class="warpformpendaftaran">
 				<h3>pendaftaran</h3>	
 	
-				<form action="index.php" method="post" class="pertanyaan" id="pendaftaran">
+				<form action="index.php" method="post" class="theform">
 				<ul>
 	
 				<li class=""><label class="description">ID Bisnis </label>
