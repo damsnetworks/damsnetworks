@@ -36,6 +36,7 @@ include "../inc/functions.php";
 								<li class="profilepicedit">ProfilePics</li>
 								<li class="profileupgrade sepver">Upgrade</li>
 								<li class="profiletema sepver">Theme</li>
+								<li class="profileIM sepver">IM</li>
 								<li class="profiledelete sepver">Delete</li>
 							</ul>	
 							</div>

@@ -32,26 +32,7 @@ $showPrivateFromAdmin = new INFO();$showPrivateFromAdmin->billing(1);
 
 	<div class="adminnews">
 	<h3>Apa yang terjadi?</h3>	
-		<div class="adminnewsright">	
-			<div class="box">
-			Penawaran	:	<span class="penjelasan">0</span>
-			</div>
-			<div class="box">
-			Inbox		:	<span class="penjelasan">3*</span>
-			</div>
-			</div>
-			<div class="adminnewsleft">
-			<div class="box">
-			Product		:	<span class="penjelasan">12</span>
-			</div>
-			<div class="box">
-			Masa aktif	:	<span class="penjelasan">2 hari</span>
-			</div>
-			<div class="box">
-			Masa habis	:	<span class="penjelasan">12 - January - 2010</span>
-			</div>
-		</div>
-		<div class="clear"></div>
+
 	</div>
 </div>
 <div class="footer">

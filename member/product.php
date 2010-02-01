@@ -29,9 +29,10 @@ include "../inc/functions.php";
 			
 			<div class="admincontrolprofileeditleft">
 					<ul>
-						<li>list product</li>
-						<li>edit product</li>
-						<li>deleate product</li>
+						<li class="producttambah">add product</li>
+						<li class="productlist sepver">list product</li>
+						<li class="productedit sepver">edit product</li>
+						<li class="productdelete sepver">deleate product</li>
 					</ul>
 				</div>
 				<div class="admincontrolprofileeditright"></div>
