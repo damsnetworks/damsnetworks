@@ -28,6 +28,12 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 /* ICON ERROR */
 .iconerror{background:url("../img/megaphone.gif") no-repeat scroll 0 0 transparent;}
 .iconerror p{background:none repeat scroll 0 0 #444444;color:#FFFFFF;margin-left:30px;padding:2px 10px;width:550px;}
+
+/* HEADINGS */
+.huserlogin{background:none repeat scroll 0 0 #F0F0F0;padding:5px 5px 5px 10px;
+}
+
+
 /* FOOTER */
 .footer{margin:0px auto;width:920px;}
 
@@ -50,6 +56,12 @@ body{background:#FFF url(../img/bgline.png) repeat-x scroll right 180px}
 .partnerandwhybox{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #DDDDDD;height:120px;margin:0 0 10px;}
 .pendaftaranerror{color:#444444;padding:10px;width:600px;}
 .pendaftaranerror li{text-align:center;list-style:none outside none;background:none repeat scroll 0 0 #D71102;color:#FFFFFF;list-style:none outside none;margin:3px 0;padding:2px 5px;}
+
+/* MEMBER LOGIN */
+.warpmemberlogin{background:none repeat scroll 0 0 #F0F0F0;border:1px solid #CCCCCC;height:240px;margin:95px auto;width:500px;}
+.warpformlogin{background:none repeat scroll 0 0 #FFFFFF;padding:10px}
+.warpformloginappoved{background:none repeat scroll 0 0 #FFFFFF;padding:51px 20px 76px;}
+.warpformloginappoved li{list-style:none;}
 
 /* PENDAFTARAN SUKSES */
 .pendaftaranterimakasih{background:none repeat scroll 0 0 #444444;color:#FFFFFF;height:50px;margin:5px;padding:5px;width:900px;}
@@ -98,8 +110,8 @@ h5{font-size:12px;line-height:18px;padding:5px 0}
 h6{font-size:10px;line-height:16px}
 
 /* Forms */
-.pertanyaan li{width:61%}
-.pertanyaan ul li:focus{background:#FFF7C0}
+.theform li{width:61%}
+.theform ul li:focus{background:#FFF7C0}
 form ul{font-size:100%;list-style-type:none;margin:0;padding:0;width:100%}
 form li{display:block;margin:0;padding:4px 5px 2px 9px;position:relative}
 .buttons{clear:both;display:block;margin-top:10px}
