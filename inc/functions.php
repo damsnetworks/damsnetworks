@@ -35,13 +35,13 @@ class TMPL
 		}
 	// FUNCTION MENU IN MEMBERS
 	function showMenuMember(
-	$firstMenu = 'INBOX', 
+	$firstMenu = 'ADMIN', 
 	$secondMenu = 'EDIT PROFILE', 
 	$ThirdMenu = 'EDIT PRODUCT',
 	$fourthMenu = 'BANTUAN')
 		{
 			echo "
-			<li><a title='Home' href='inbox.php'>$firstMenu</a></li>
+			<li><a title='Home' href='admin.php'>$firstMenu</a></li>
 			<li><a title='Home' href='edit.php'>$secondMenu</a></li>
 			<li><a title='Home' href='product.php'>$ThirdMenu</a></li>
 			<li><a title='Home' href='help.php'>$fourthMenu</a></li>
