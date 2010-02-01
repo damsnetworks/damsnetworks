@@ -27,54 +27,71 @@ include "../inc/functions.php";
 	</div>
 <div class="admincontrolprofileedit">
 <?php $showAnnouncement = new INFO();$showAnnouncement->what('editprofile'); ?>
-		<form action="add.php" method="post" class="pertanyaan" id="pendaftaran">
-		<ul>
-		
-		</li><li class="">
-		<label class="description">Nama Pemilik</label>
-		<span><input value="$namaFn" size="20" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
-		<label>First</label></span>
-		<span><input value="$namaLn" size="30" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
-		<label>Last</label></span>
-		<p id="guide_5" class="guidelines"><small>23</small></p> 
-		</li>
-		
-		<li class="">
-		<label class="description">Pengumuman</label>
-		<div><textarea class="element textarea medium" name="Introduction">$Pengumuman untuk pembeli ( halaman profile )</textarea></div>
-		<p id="guide_3" class="guidelines"><small>23</small></p> 
-		</li>
-
-		<li class="">
-		<label class="description">Tentang Bisnis Anda </label>
-		<div><textarea class="element textarea medium" name="Introduction" id="element_3">$Introduction</textarea></div>
-		<p id="guide_3" class="guidelines"><small>$Introduction</small></p> 
-		</li>
-		
-		<li class="">
-		<label class="description">Alamat Bisnis Anda </label>
-		<div><textarea class="element textarea medium" name="Introduction" id="element_3">$alamat yang disimpan didatabase</textarea></div>
-		<p id="guide_3" class="guidelines"><small>$alamat yang disimpan didatabase</small></p> 
-		</li>
-		
-		<li class="">
-		<label class="description">Email Anda</label>
-		<div><input type="text" value="$emailsaya" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
-		<p id="guide_4" class="guidelines"><small>aw</small></p> 
-		</li>	
-
-		<li class="">
-		<label class="description">Kontak Anda </label>
-		<div><input type="text" value="$Nomertlp" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
-		<p id="guide_4" class="guidelines"><small>$Nomertlp</small></p> 
-		</li>		
-
-				<li class="buttons">
-				<input type="hidden" value="" name="" >
-				<input type="submit" value="Submit" name="submit" class="button_text" id="saveForm">
-		</li>
-			</ul>
-		</form>
+					<div class="admincontrolprofileeditleft">
+							<div class="hedit">
+							<h3>Profile</h3>
+							</div>
+							<div class="adminleditbox">
+							<ul>
+								<li class="profilepicedit">ProfilePics</li>
+								<li class="profileupgrade sepver">Upgrade</li>
+								<li class="profiletema sepver">Theme</li>
+								<li class="profiledelete sepver">Delete</li>
+							</ul>	
+							</div>
+					</div>
+					
+					<div class="admincontrolprofileeditright">
+					<form action="add.php" method="post" class="theform">
+						<ul>
+	
+						</li><li class="">
+						<label class="description">Nama Pemilik</label>
+						<span><input value="$namaFn" size="20" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
+						<label>First</label></span>
+						<span><input value="$namaLn" size="30" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
+						<label>Last</label></span>
+						<p id="guide_5" class="guidelines"><small>23</small></p> 
+						</li>
+	
+						<li class="">
+						<label class="description">Pengumuman</label>
+						<div><textarea class="element textarea medium" name="Introduction">$Pengumuman untuk pembeli ( halaman profile )</textarea></div>
+						<p id="guide_3" class="guidelines"><small>23</small></p> 
+						</li>
+	
+						<li class="">
+						<label class="description">Tentang Bisnis Anda </label>
+						<div><textarea class="element textarea medium" name="Introduction" id="element_3">$Introduction</textarea></div>
+						<p id="guide_3" class="guidelines"><small>$Introduction</small></p> 
+						</li>
+	
+						<li class="">
+						<label class="description">Alamat Bisnis Anda </label>
+						<div><textarea class="element textarea medium" name="Introduction" id="element_3">$alamat yang disimpan didatabase</textarea></div>
+						<p id="guide_3" class="guidelines"><small>$alamat yang disimpan didatabase</small></p> 
+						</li>
+	
+						<li class="">
+						<label class="description">Email Anda</label>
+						<div><input type="text" value="$emailsaya" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
+						<p id="guide_4" class="guidelines"><small>aw</small></p> 
+						</li>	
+	
+						<li class="">
+						<label class="description">Kontak Anda </label>
+						<div><input type="text" value="$Nomertlp" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
+						<p id="guide_4" class="guidelines"><small>$Nomertlp</small></p> 
+						</li>		
+	
+								<li class="buttons">
+								<input type="hidden" value="" name="" >
+								<input type="submit" value="Submit" name="submit" class="button_text" id="saveForm">
+						</li>
+							</ul>
+						</form>
+					</div>
+					<div class="clear"></div>
 		<!--END RIGHT-->
 		</div>
 </div>
