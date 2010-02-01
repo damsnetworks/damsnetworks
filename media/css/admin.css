@@ -1,7 +1,7 @@
 /* ADMIN.CSS */
 .loginbox li{width:61%}
 .admincontrolutama .box .penjelasan{-moz-border-radius:4px;background:none repeat scroll 0 0 #444;color:#FFF;padding:5px}
-.admincontrolutama{background:none repeat scroll 0 0 #FFF;border:1px solid #CCC;height:500px;margin:0 auto;width:920px}
+.admincontrolutama{background:none repeat scroll 0 0 #FFF;border:1px solid #CCC;margin:0 auto;width:920px}
 .loginbox ul li:focus{background:#FFF7C0}
 .admincontrolutama .box{background:none repeat scroll 0 0 #F0F0F0;margin:5px;padding:10px}
 .adminnews{margin:0 auto;padding:10px;width:900px}
