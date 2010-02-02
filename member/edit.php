@@ -1,6 +1,12 @@
 <?php 
-session_start();
+
 include "../app.php";
+include_once($basepath . "inc/adodb5/session/adodb-session2.php");
+ADOdb_Session::config($$dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options=false);
+
+session_start();
+if ((rand()%10) == 0) adodb_session_regenerate_id(); 
+
 include $basepath . "inc/PasswordHash.php";
 include $basepath . "inc/functions.php";
 include $basepath . "inc/adodb5/adodb.inc.php";

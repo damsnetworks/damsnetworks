@@ -66,6 +66,22 @@ CREATE TABLE `content` (
   KEY `Username` (`Username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+/*Table structure for table `sessions2` */
+
+DROP TABLE IF EXISTS `sessions2`;
+
+CREATE TABLE `sessions2` (
+  `sesskey` varchar(64) NOT NULL DEFAULT '',
+  `expiry` datetime NOT NULL,
+  `expireref` varchar(250) DEFAULT '',
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `sessdata` longtext,
+  PRIMARY KEY (`sesskey`),
+  KEY `sess2_expiry` (`expiry`),
+  KEY `sess2_expireref` (`expireref`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
