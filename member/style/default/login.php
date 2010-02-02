@@ -23,12 +23,12 @@
 			<form method="post" action="index.php" class="theform" name="test">
 			<ul>
 				<li class=""><label class="description">ID Bisnis </label>
-				<div><input type="text" value="" maxlength="255" class="element text big" name="Username" id="element_1"></div>
+				<div><input type="text" value="" maxlength="255" class="element text big" name="loginname" id="element_1"></div>
 				<p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p></li>		
 	
 				<li class="">
 				<label class="description">ID Password </label>
-				<div><input type="password" value="" maxlength="255" class="element text big" name="Password" id="element_2"></div>
+				<div><input type="password" value="" maxlength="255" class="element text big" name="password" id="element_2"></div>
 				<p id="guide_2" class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p> 
 			
 				<li class="buttons">

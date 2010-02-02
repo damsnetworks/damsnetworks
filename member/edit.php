@@ -1,5 +1,19 @@
 <?php 
-include "../inc/functions.php";
+session_start();
+include "../app.php";
+include $basepath . "inc/PasswordHash.php";
+include $basepath . "inc/functions.php";
+include $basepath . "inc/adodb5/adodb.inc.php";
+
+$cid = (int) $_SESSION['sCid'];
+
+$db = ADONewConnection($dbtype);
+//$db->debug = true;
+$db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
+
+$query = "SELECT cid, ownerFn, ownerLn, companyPhone, introduction FROM company WHERE cid = '".$cid."'";
+$row = $db->GetRow($query);
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -48,9 +62,9 @@ include "../inc/functions.php";
 	
 						</li><li class="">
 						<label class="description">Nama Pemilik</label>
-						<span><input value="$namaFn" size="20" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
+						<span><input value="<?php echo $row['ownerFn']; ?>" size="20" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
 						<label>First</label></span>
-						<span><input value="$namaLn" size="30" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
+						<span><input value="<?php echo $row['ownerLn']; ?>" size="30" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
 						<label>Last</label></span>
 						<p id="guide_5" class="guidelines"><small>23</small></p> 
 						</li>
@@ -63,8 +77,8 @@ include "../inc/functions.php";
 	
 						<li class="">
 						<label class="description">Tentang Bisnis Anda </label>
-						<div><textarea class="element textarea medium" name="Introduction" id="element_3">$Introduction</textarea></div>
-						<p id="guide_3" class="guidelines"><small>$Introduction</small></p> 
+						<div><textarea class="element textarea medium" name="Introduction" id="element_3"><?php echo $row['introduction']; ?></textarea></div>
+						<p id="guide_3" class="guidelines"><small><?php echo $row['introduction']; ?></small></p> 
 						</li>
 	
 						<li class="">
@@ -81,8 +95,8 @@ include "../inc/functions.php";
 	
 						<li class="">
 						<label class="description">Kontak Anda </label>
-						<div><input type="text" value="$Nomertlp" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
-						<p id="guide_4" class="guidelines"><small>$Nomertlp</small></p> 
+						<div><input type="text" value="<?php echo $row['companyPhone']; ?>" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
+						<p id="guide_4" class="guidelines"><small><?php echo $row['companyPhone']; ?></small></p> 
 						</li>		
 	
 								<li class="buttons">

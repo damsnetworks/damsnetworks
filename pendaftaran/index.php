@@ -2,55 +2,61 @@
 include("../app.php");
 include $basepath . "inc/functions.php";
 
-$submit	= (isset($_POST['submit'])) ? true : false;
+// variable
+//todo: validate field
+$submit			= (isset($_POST['submit'])) ? true : false;
 
 $message = '';
 $error = array();
+
 if ($submit)
 {
 	include $basepath . "inc/adodb5/adodb.inc.php";
 	include $basepath . "inc/PasswordHash.php";
 	
+	$loginname 		= $_POST['loginname'];
+	$ownerFn 		= $_POST['ownerFn'];
+	$ownerLn 		= $_POST['ownerLn'];
+	$introduction 	= $_POST['introduction'];
+	$companyPhone	= $_POST['phone'];
+	$partnership 	= $_POST['partnership'];
+	
 	$db = ADONewConnection($dbtype);
 	$db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 	
-	$username = mysql_real_escape_string($_POST['Username']);
-
 	$hash = new PasswordHash(8, FALSE);
-	$password = $hash->HashPassword($_POST['Password']);
+	$password = $hash->HashPassword($_POST['password']);
 	
 	// required field
-	if(empty($_POST['Username']))
+	if(empty($_POST['loginname']))
 	{
 		$error[] = "Username field wajib diisi";
 	}
 
-	if(empty($_POST['Password']))
+	if(empty($_POST['password']))
 	{
 		$error[] = "Password wajib diisi";
 	}
 
 	// check username availibility
-	$query = "SELECT uid FROM users WHERE username = '".$username."'";
-	$checkusername = $db->GetOne($query);
-	if($checkusername)
+	$query = "SELECT cid FROM company WHERE loginname = '".$loginname."'";
+	$checkloginname = $db->GetOne($query);
+	if($checkloginname)
 	{
-		$error[] = "Sorry, that username is taken. Please go back and try again.";
+		$error[] = "Sorry, that loginname is taken. Please go back and try again.";
 	}
 
 	if (!sizeof($error))
 	{
-
-		// gw comment dulu ;)
-		//mysql_query("INSERT INTO company (Introduction, Phone) VALUES('$_POST[Introduction]','$_POST[Phone]')");
+		$data['loginname'] 		= $loginname;
+		$data['password'] 		= $password;
+		$data['ownerFn'] 		= $ownerFn;
+		$data['ownerLn'] 		= $ownerLn;
+		$data['introduction'] 	= $introduction;
+		$data['companyPhone'] 	= $companyPhone;
+		$data['partnership'] 	= $partnership;
 		
-		// todo: validation field
-		$data['username'] 	= $_POST['Username'];
-		$data['ownerFn'] 	= $_POST['OwnerFn'];
-		$data['ownerLn'] 	= $_POST['OwnerLn'];
-		$data['password'] 	= $hash->HashPassword($_POST['Password']);
-		
-		if($db->AutoExecute('users', $data, 'INSERT'))
+		if($db->AutoExecute('company', $data, 'INSERT'))
 		{
 			$message = "Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.";
 		}
