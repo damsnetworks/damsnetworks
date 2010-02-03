@@ -4,7 +4,7 @@ include "header.php";
 	
 	<div class="warppendaftaranmid">
 		<div class="pendaftaranperaturan">
-		Prasyarat
+		<?php $showterms = new INFO();$showterms->what('pendaftaranterms'); ?>
 		</div>
 		<div class="pendaftaranisi">
 		
@@ -28,34 +28,35 @@ include "header.php";
 				<ul>
 	
 				<li class=""><label class="description">ID Bisnis </label>
-				<div><input type="text" value="" maxlength="60" class="element text medium" name="loginname" value="<?php echo $loginname ?> id="element_1"></div>
-				<p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p> 
+				<div><input type="text" maxlength="60" class="element text medium" name="loginname" value=""></div>
+				<p class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p> 
 				</li>		
 	
 				<li class="">
 				<label class="description">ID Password </label>
-				<div><input type="password" value="" maxlength="255" class="element text medium" name="password" id="element_2"></div>
-				<p id="guide_2" class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p> 
-	
-				</li><li class="">
+				<div><input type="password" maxlength="255" class="element text medium" name="password" value=""></div>
+				<p class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p> 
+				</li>
+				
+				<li class="">
 				<label class="description">Nama Pemilik </label>
-				<span><input value="" size="8" maxlength="255" class="element text" name="ownerFn" value="<?php echo $ownerFn ?> id="element_5_1">
+				<span><input value="" size="8" maxlength="255" class="element text" name="ownerFn" value="">
 				<label>First</label></span>
-				<span><input value="" size="14" maxlength="255" class="element text" name="ownerLn" value="<?php echo $ownerLn ?> id="element_5_2">
+				<span><input value="" size="14" maxlength="255" class="element text" name="ownerLn" value="">
 				<label>Last</label></span>
-				<p id="guide_5" class="guidelines"><small>Masukan Nama, anda lihat bagian help untuk bantuan lebih lanjut.</small></p> 
+				<p class="guidelines"><small>Masukan Nama, anda lihat bagian help untuk bantuan lebih lanjut.</small></p> 
 				</li>
 	
 				<li class="">
 				<label class="description">Tentang Bisnis Anda </label>
-				<div><textarea class="element textarea medium" name="introduction" value="<?php echo $introduction ?> id="element_3"></textarea></div>
-				<p id="guide_3" class="guidelines"><small>Masukan kata perkenalan bisnis anda, akan kami gunakan pada halaman bisnis anda.</small></p> 
+				<div><textarea class="element textarea medium" name="introduction" value=""></textarea></div>
+				<p class="guidelines"><small>Masukan kata perkenalan bisnis anda, akan kami gunakan pada halaman bisnis anda.</small></p> 
 				</li>
 	
 				<li class="">
 				<label class="description">Kontak Anda </label>
-				<div><input type="text" value="" maxlength="255" class="element text medium" name="phone" value="<?php echo $phone ?> id="element_4"></div>
-				<p id="guide_4" class="guidelines"><small>Masukan nomer telpon bisnis anda, kami akan melakukan konfirmasi melalui nomer ini.</small></p> 
+				<div><input type="text" value="" maxlength="255" class="element text medium" name="phone" value=""></div>
+				<p class="guidelines"><small>Masukan nomer telpon bisnis anda, kami akan melakukan konfirmasi melalui nomer ini.</small></p> 
 				</li>		
 	
 				<li class="">
@@ -68,19 +69,17 @@ include "header.php";
 				<input type="radio" value="3" class="element radio" name="partnership">
 				<label class="choice">Gold Partneship</label>
 				</span>
-				<p id="guide_6" class="guidelines"><small>Pilih salah satu paket, silahkan ke halaman help untuk bantuan lebih lanjut</small></p> 
+				<p class="guidelines"><small>Pilih salah satu paket, silahkan ke halaman help untuk bantuan lebih lanjut</small></p> 
 				</li>
 	
 				<li class="buttons">
-				<input type="hidden" value="" name="" >
-				<input type="submit" value="Submit" name="submit" class="button_text" id="saveForm">
+				<input type="submit" value="Submit" name="submit" class="button_text">
 				</li>
+				
 				</ul>
 			</form>
 			</div>
 		</div>
-	<!-- CLEARING -->
-
 
 <?php
 include "footer.php";

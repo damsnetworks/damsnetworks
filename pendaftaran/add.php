@@ -48,6 +48,8 @@ if (!sizeof($error) && $submit)
 	$data['OwnerFn'] 	= $_POST['OwnerFn'];
 	$data['OwnerLn'] 	= $_POST['OwnerLn'];
 	$data['Password'] 	= $_POST['Password'];
+	$data['Password'] 	= $_POST['Password'];
+	$data['partnership']= $_POST['partnership'];
 	
 	if($db->AutoExecute('users', $data, 'INSERT'))
 	{

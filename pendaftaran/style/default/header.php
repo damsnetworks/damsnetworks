@@ -26,4 +26,4 @@
 	</div>
 
 	<div class="warppendaftaran">
-	<div class="warppendaftaranlef"><?php $showBox = new TMPL();$showBox->showBox(5) ?></div>
+	<div class="warppendaftaranlef"><?php $showBox = new TMPL();$showBox->showBox(3) ?></div>

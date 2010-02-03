@@ -4,7 +4,7 @@ include $basepath . "inc/functions.php";
 
 // variable
 //todo: validate field
-$submit			= (isset($_POST['submit'])) ? true : false;
+$submit	= (isset($_POST['submit'])) ? true : false;
 
 $message = '';
 $error = array();
@@ -32,10 +32,13 @@ if ($submit)
 	{
 		$error[] = "Username field wajib diisi";
 	}
-
 	if(empty($_POST['password']))
 	{
 		$error[] = "Password wajib diisi";
+	}
+	if(empty($_POST['partnership']))
+	{
+		$error[] = "pilihan partner wajib diisi";
 	}
 
 	// check username availibility
