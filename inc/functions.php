@@ -15,6 +15,25 @@ Class ini digunakan untuk mempermudah integrasi antara adodb
 = lists =
 - adodbsessionstart
 */
+function loginCheck()
+{
+	if (!isset($_SESSION["sCid"]))
+	{
+		echo 'anda harus login';
+		die();
+	}
+
+}
+
+class getUserInfo
+{
+     function getId()
+     {
+       $cid = $_SESSION['sCid'];
+       return $cid;
+     }
+
+}
 class UADODB
 {
 	function adodbSessionStart()
@@ -38,7 +57,6 @@ webwireframe sementara disimpan pada class TMPL
 */
 class TMPL
 {
-
 	// FUNCTION MENU
 	function showMenu($firstMenu = 'HOME',$secondMenu = 'BUY', $ThirdMenu = 'PROFILE',$fourthMenu = 'TOS',$fifthMenu ='HELP',$sixthMenu = 'HUBUNGI KAMI')
 		{

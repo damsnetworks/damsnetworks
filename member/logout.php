@@ -1,6 +1,6 @@
-<?php 
+<?php
 	session_start();
-	$_SESSION = array();
-	session_destroy(); 
+
+	//delete from sessions where expireref = '$USER' ???
+	header('Location: index.php');
 ?>
-<meta http-equiv="refresh" content="0;index.php">
