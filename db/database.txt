@@ -1,76 +1,5 @@
-/*
-SQLyog Community- MySQL GUI v8.21 Beta2
-MySQL - 5.1.41 : Database - dams
-*********************************************************************
-*/
 
-/*!40101 SET NAMES utf8 */;
-
-/*!40101 SET SQL_MODE=''*/;
-
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`dams` /*!40100 DEFAULT CHARACTER SET latin1 */;
-
-USE `dams`;
-
-/*Table structure for table `company` */
-
-DROP TABLE IF EXISTS `company`;
-
-CREATE TABLE `company` (
-  `cid` int(25) NOT NULL AUTO_INCREMENT,
-  `loginname` varchar(60) NOT NULL,
-  `companyName` varchar(25) DEFAULT NULL,
-  `companyAddress` varchar(255) DEFAULT NULL,
-  `companyCity` varchar(255) DEFAULT NULL,
-  `companyProvince` varchar(255) DEFAULT NULL,
-  `companyPhone` int(20) DEFAULT NULL,
-  `ownerFn` varchar(30) NOT NULL,
-  `ownerLn` varchar(30) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `partnership` tinyint(1) NOT NULL DEFAULT '0',
-  `status` tinyint(1) NOT NULL DEFAULT '0',
-  `type` tinyint(1) DEFAULT '0',
-  `introduction` text,
-  PRIMARY KEY (`cid`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
-
-/*Table structure for table `company.bak` */
-
-DROP TABLE IF EXISTS `company.bak`;
-
-CREATE TABLE `company.bak` (
-  `cid` int(25) NOT NULL AUTO_INCREMENT,
-  `companyName` varchar(60) NOT NULL,
-  `introduction` text NOT NULL,
-  `companyAddress` text NOT NULL,
-  `companyEmail` varchar(100) NOT NULL,
-  `companyPhone` int(15) NOT NULL,
-  PRIMARY KEY (`cid`),
-  KEY `Username` (`companyName`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-/*Table structure for table `content` */
-
-DROP TABLE IF EXISTS `content`;
-
-CREATE TABLE `content` (
-  `PID` int(25) NOT NULL AUTO_INCREMENT,
-  `Username` varchar(60) NOT NULL,
-  `PostCat` int(11) NOT NULL DEFAULT '0',
-  `Posts` longtext NOT NULL,
-  PRIMARY KEY (`PID`),
-  KEY `Username` (`Username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-/*Table structure for table `sessions2` */
-
-DROP TABLE IF EXISTS `sessions2`;
-
-CREATE TABLE `sessions2` (
+CREATE TABLE IF NOT EXISTS `adodbsessions` (
   `sesskey` varchar(64) NOT NULL DEFAULT '',
   `expiry` datetime NOT NULL,
   `expireref` varchar(250) DEFAULT '',
@@ -82,7 +11,32 @@ CREATE TABLE `sessions2` (
   KEY `sess2_expireref` (`expireref`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+CREATE TABLE IF NOT EXISTS `company` (
+  `cid` int(25) NOT NULL AUTO_INCREMENT,
+  `loginname` varchar(60) NOT NULL,
+  `companyName` varchar(25) DEFAULT NULL,
+  `companyAddress` varchar(255) DEFAULT NULL,
+  `companyEmail` varchar(255) DEFAULT NULL,
+  `companyPhone` int(20) DEFAULT NULL,
+  `ownerFn` varchar(30) NOT NULL,
+  `ownerLn` varchar(30) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `partnership` tinyint(1) NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `type` tinyint(1) DEFAULT '0',
+  `introduction` text,
+  PRIMARY KEY (`cid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+
+
+CREATE TABLE IF NOT EXISTS `content` (
+  `PID` int(25) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(60) NOT NULL,
+  `PostCat` int(11) NOT NULL DEFAULT '0',
+  `Posts` longtext NOT NULL,
+  PRIMARY KEY (`PID`),
+  KEY `Username` (`Username`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
