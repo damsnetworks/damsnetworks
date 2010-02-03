@@ -1,8 +1,8 @@
 <?php 
-
 include "../app.php";
 include_once($basepath . "inc/adodb5/session/adodb-session2.php");
-ADOdb_Session::config($$dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options=false);
+$options['table'] = 'adodbsessions';
+ADOdb_Session::config($dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options);
 
 session_start();
 if ((rand()%10) == 0) adodb_session_regenerate_id(); 
@@ -63,51 +63,51 @@ $row = $db->GetRow($query);
 					</div>
 					
 					<div class="admincontrolprofileeditright">
-					<form action="add.php" method="post" class="theform">
+					<form action="edit.php" method="post" class="theform">
 						<ul>
 	
 						</li><li class="">
 						<label class="description">Nama Pemilik</label>
-						<span><input value="<?php echo $row['ownerFn']; ?>" size="20" maxlength="255" class="element text" name="OwnerFn" id="element_5_1">
+						<span><input value="<?php echo $row['ownerFn']; ?>" size="20" maxlength="255" class="element text" name="OwnerFn">
 						<label>First</label></span>
-						<span><input value="<?php echo $row['ownerLn']; ?>" size="30" maxlength="255" class="element text" name="OwnerLn" id="element_5_2">
+						<span><input value="<?php echo $row['ownerLn']; ?>" size="30" maxlength="255" class="element text" name="OwnerLn">
 						<label>Last</label></span>
-						<p id="guide_5" class="guidelines"><small>23</small></p> 
+						<p class="guidelines"><small>23</small></p> 
 						</li>
 	
 						<li class="">
 						<label class="description">Pengumuman</label>
 						<div><textarea class="element textarea medium" name="Introduction">$Pengumuman untuk pembeli ( halaman profile )</textarea></div>
-						<p id="guide_3" class="guidelines"><small>23</small></p> 
+						<p class="guidelines"><small>23</small></p> 
 						</li>
 	
 						<li class="">
 						<label class="description">Tentang Bisnis Anda </label>
-						<div><textarea class="element textarea medium" name="Introduction" id="element_3"><?php echo $row['introduction']; ?></textarea></div>
-						<p id="guide_3" class="guidelines"><small><?php echo $row['introduction']; ?></small></p> 
+						<div><textarea class="element textarea medium" name="Introduction"><?php echo $row['introduction']; ?></textarea></div>
+						<p class="guidelines"><small>deskripsi tentang bisnis anda</small></p> 
 						</li>
 	
 						<li class="">
 						<label class="description">Alamat Bisnis Anda </label>
-						<div><textarea class="element textarea medium" name="Introduction" id="element_3">$alamat yang disimpan didatabase</textarea></div>
-						<p id="guide_3" class="guidelines"><small>$alamat yang disimpan didatabase</small></p> 
+						<div><textarea class="element textarea medium" name="Introduction">$alamat yang disimpan didatabase</textarea></div>
+						<p class="guidelines"><small>$alamat yang disimpan didatabase</small></p> 
 						</li>
 	
 						<li class="">
 						<label class="description">Email Anda</label>
-						<div><input type="text" value="$emailsaya" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
-						<p id="guide_4" class="guidelines"><small>aw</small></p> 
+						<div><input type="text" value="$emailsaya" maxlength="255" class="element text medium" name="Phone"></div>
+						<p class="guidelines"><small>aw</small></p> 
 						</li>	
 	
 						<li class="">
 						<label class="description">Kontak Anda </label>
-						<div><input type="text" value="<?php echo $row['companyPhone']; ?>" maxlength="255" class="element text medium" name="Phone" id="element_4"></div>
-						<p id="guide_4" class="guidelines"><small><?php echo $row['companyPhone']; ?></small></p> 
+						<div><input type="text" value="<?php echo $row['companyPhone']; ?>" maxlength="255" class="element text medium" name="Phone"></div>
+						<p class="guidelines"><small>deskripsi tentang telphon</small></p> 
 						</li>		
 	
 								<li class="buttons">
 								<input type="hidden" value="" name="" >
-								<input type="submit" value="Submit" name="submit" class="button_text" id="saveForm">
+								<input type="submit" value="Edit Profile" name="submit" class="button_text">
 						</li>
 							</ul>
 						</form>
