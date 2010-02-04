@@ -1,11 +1,11 @@
 <?php
+include_once "../app.php";
 /* kumpulan functions yg dibutuhin
 lists:
 - validasi username
 - validasi email
 - validasi url
 - send email
-
 */
 
 /*
@@ -25,21 +25,14 @@ function loginCheck()
 
 }
 
-class getUserInfo
-{
-     function getId()
-     {
-       $cid = $_SESSION['sCid'];
-       return $cid;
-     }
-
-}
 class UADODB
 {
 	function adodbSessionStart()
 	{
-		include "../app.php";
+		global $basepath,$dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options;
+		// include the uadodb api
 		include_once($basepath . "inc/adodb5/session/adodb-session2.php");
+		
 		$options['table'] = 'adodbsessions';
 		ADOdb_Session::config($dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options);
 		session_start();
