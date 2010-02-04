@@ -32,7 +32,7 @@
 				<p id="guide_2" class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p>
 
 				<li class="buttons">
-				<input type="submit" class="button_text" name="submit" value="DAFTAR">
+				<input type="submit" class="button_text" name="submit" value="LOGIN">
 				</li>
 			</ul>
 			</form>

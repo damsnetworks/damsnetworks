@@ -72,7 +72,7 @@ include "header.php";
 				</li>
 	
 				<li class="buttons">
-				<input type="submit" value="Submit" name="submit" class="button_text">
+				<input type="submit" value="DAFTAR" name="submit" class="button_text">
 				</li>
 
 				</ul>
