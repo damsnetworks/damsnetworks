@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 ?>
-	
+
 	<div class="warppendaftaranmid">
 		<div class="pendaftaranperaturan">
 		<?php $showterms = new INFO();$showterms->what('pendaftaranterms'); ?>
@@ -26,38 +26,37 @@ include "header.php";
 	
 				<form action="index.php" method="post" class="theform">
 				<ul>
-	
+
 				<li class=""><label class="description">ID Bisnis </label>
-				<div><input type="text" maxlength="60" class="element text medium" name="loginname" value=""></div>
-				<p class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p> 
-				</li>		
-	
+				<div><input type="text" maxlength="60" class="element text medium" name="username" value=""></div>
+				<p class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p>
+				</li>
+
 				<li class="">
 				<label class="description">ID Password </label>
-				<div><input type="password" maxlength="255" class="element text medium" name="password" value=""></div>
-				<p class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p> 
+				<div><input type="password" maxlength="100" class="element text medium" name="password" value=""></div>
+				<p class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p>
 				</li>
-				
+
+                <li class=""><label class="description">Nama Usaha </label>
+				<div><input type="text" maxlength="25" class="element text medium" name="companyName" value=""></div>
+				<p class="guidelines"><small>Masukan nama usaha anda ex. PT maju mundur, maksimal 25 kata</small></p>
+				</li>
+
 				<li class="">
 				<label class="description">Nama Pemilik </label>
-				<span><input value="" size="8" maxlength="255" class="element text" name="ownerFn" value="">
+				<span><input value="" size="8" maxlength="30" class="element text" name="OwnerFn" value="">
 				<label>First</label></span>
-				<span><input value="" size="14" maxlength="255" class="element text" name="ownerLn" value="">
+				<span><input value="" size="14" maxlength="30" class="element text" name="OwnerLn" value="">
 				<label>Last</label></span>
-				<p class="guidelines"><small>Masukan Nama, anda lihat bagian help untuk bantuan lebih lanjut.</small></p> 
+				<p class="guidelines"><small>Masukan Nama, anda lihat bagian help untuk bantuan lebih lanjut.</small></p>
 				</li>
-	
-				<li class="">
-				<label class="description">Tentang Bisnis Anda </label>
-				<div><textarea class="element textarea medium" name="introduction" value=""></textarea></div>
-				<p class="guidelines"><small>Masukan kata perkenalan bisnis anda, akan kami gunakan pada halaman bisnis anda.</small></p> 
-				</li>
-	
+
 				<li class="">
 				<label class="description">Kontak Anda </label>
-				<div><input type="text" value="" maxlength="255" class="element text medium" name="phone" value=""></div>
-				<p class="guidelines"><small>Masukan nomer telpon bisnis anda, kami akan melakukan konfirmasi melalui nomer ini.</small></p> 
-				</li>		
+				<div><input type="text" value="" maxlength="20" class="element text medium" name="companyPhone" value=""></div>
+				<p class="guidelines"><small>Masukan nomer telpon bisnis anda, kami akan melakukan konfirmasi melalui nomer ini.</small></p>
+				</li>
 	
 				<li class="">
 				<label class="description">Memberships </label>	
@@ -75,7 +74,7 @@ include "header.php";
 				<li class="buttons">
 				<input type="submit" value="Submit" name="submit" class="button_text">
 				</li>
-				
+
 				</ul>
 			</form>
 			</div>

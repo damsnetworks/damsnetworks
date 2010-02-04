@@ -16,29 +16,28 @@
 			</div>
 		</div>
 	</div>
-		
+
 	<div class="warpmemberlogin">
 			<div class="huserlogin"><h3>User Login</h3></div>
 			<div class="warpformlogin">
 			<form method="post" action="index.php" class="theform" name="test">
 			<ul>
 				<li class=""><label class="description">ID Bisnis </label>
-				<div><input type="text" value="" maxlength="255" class="element text big" name="loginname" id="element_1"></div>
-				<p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p></li>		
-	
+				<div><input type="text" value="" maxlength="60" class="element text big" name="username"></div>
+				<p id="guide_1" class="guidelines"><small>Masukan ID bisnis anda, lihat bagian help untuk bantuan lebih lanjut.</small></p></li>
+
 				<li class="">
 				<label class="description">ID Password </label>
-				<div><input type="password" value="" maxlength="255" class="element text big" name="password" id="element_2"></div>
-				<p id="guide_2" class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p> 
-			
+				<div><input type="password" value="" maxlength="100" class="element text big" name="password"></div>
+				<p id="guide_2" class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p>
+
 				<li class="buttons">
-				<input type="hidden" name="" value="">
-				<input type="submit" class="button_text" name="submit" value="OK">
+				<input type="submit" class="button_text" name="submit" value="DAFTAR">
 				</li>
 			</ul>
-			</form>	
+			</form>
 			</div>
 	</div>
-</div>	
+</div>
 </body>
 </html>
