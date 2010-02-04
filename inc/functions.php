@@ -1,4 +1,5 @@
 <?php
+include_once "../app.php";
 /* kumpulan functions yg dibutuhin
 lists:
 - validasi username
@@ -15,12 +16,24 @@ Class ini digunakan untuk mempermudah integrasi antara adodb
 = lists =
 - adodbsessionstart
 */
+function loginCheck()
+{
+	if (!isset($_SESSION["sCid"]))
+	{
+		echo 'anda harus login';
+		die();
+	}
+
+}
+
 class UADODB
 {
 	function adodbSessionStart()
 	{
-		include "../app.php";
+		global $basepath,$dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options;
+		// include the uadodb api
 		include_once($basepath . "inc/adodb5/session/adodb-session2.php");
+		
 		$options['table'] = 'adodbsessions';
 		ADOdb_Session::config($dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options);
 		session_start();
@@ -38,7 +51,6 @@ webwireframe sementara disimpan pada class TMPL
 */
 class TMPL
 {
-
 	// FUNCTION MENU
 	function showMenu($firstMenu = 'HOME',$secondMenu = 'BUY', $ThirdMenu = 'PROFILE',$fourthMenu = 'TOS',$fifthMenu ='HELP',$sixthMenu = 'HUBUNGI KAMI')
 		{

@@ -4,9 +4,11 @@ include $basepath . "inc/PasswordHash.php";
 include $basepath . "inc/functions.php";
 include $basepath . "inc/adodb5/adodb.inc.php";
 
+// Session Start
 $adodbsessionstart = new UADODB;
 $adodbsessionstart->adodbSessionStart();
 
+// Start ADODB
 $db = ADONewConnection($dbtype);
 $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 

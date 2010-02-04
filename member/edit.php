@@ -1,23 +1,23 @@
 <?php 
 include "../app.php";
-include_once($basepath . "inc/adodb5/session/adodb-session2.php");
-$options['table'] = 'adodbsessions';
-ADOdb_Session::config($dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options);
-
-session_start();
-if ((rand()%10) == 0) adodb_session_regenerate_id(); 
-
 include $basepath . "inc/PasswordHash.php";
 include $basepath . "inc/functions.php";
 include $basepath . "inc/adodb5/adodb.inc.php";
 
+// Session Start
+$adodbsessionstart = new UADODB;
+$adodbsessionstart->adodbSessionStart(); 
+
+// Session Check
+loginCheck();
+
 $cid = (int) $_SESSION['sCid'];
 
 $db = ADONewConnection($dbtype);
-//$db->debug = true;
+$db->debug = true;
 $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 
-$query = "SELECT cid, ownerFn, ownerLn, companyPhone, introduction FROM company WHERE cid = '".$cid."'";
+$query = "SELECT cid, ownerFn, ownerLn, companyPhone, companyAddress, companyEmail, introduction FROM company WHERE cid = '".$cid."'";
 $row = $db->GetRow($query);
 
 ?>
@@ -63,7 +63,7 @@ $row = $db->GetRow($query);
 					</div>
 					
 					<div class="admincontrolprofileeditright">
-					<form action="edit.php" method="post" class="theform">
+					<form action="update.php" method="post" class="theform">
 						<ul>
 	
 						</li><li class="">
@@ -77,31 +77,31 @@ $row = $db->GetRow($query);
 	
 						<li class="">
 						<label class="description">Pengumuman</label>
-						<div><textarea class="element textarea medium" name="Introduction">$Pengumuman untuk pembeli ( halaman profile )</textarea></div>
+						<div><textarea class="element textarea medium" name="pengumuman">$Pengumuman untuk pembeli ( halaman profile )</textarea></div>
 						<p class="guidelines"><small>23</small></p> 
 						</li>
 	
 						<li class="">
 						<label class="description">Tentang Bisnis Anda </label>
-						<div><textarea class="element textarea medium" name="Introduction"><?php echo $row['introduction']; ?></textarea></div>
+						<div><textarea class="element textarea medium" name="introduction"><?php echo $row['introduction']; ?></textarea></div>
 						<p class="guidelines"><small>deskripsi tentang bisnis anda</small></p> 
 						</li>
 	
 						<li class="">
 						<label class="description">Alamat Bisnis Anda </label>
-						<div><textarea class="element textarea medium" name="Introduction">$alamat yang disimpan didatabase</textarea></div>
+						<div><textarea class="element textarea medium" name="companyAddress"><?php echo $row['companyAddress']; ?></textarea></div>
 						<p class="guidelines"><small>$alamat yang disimpan didatabase</small></p> 
 						</li>
 	
 						<li class="">
 						<label class="description">Email Anda</label>
-						<div><input type="text" value="$emailsaya" maxlength="255" class="element text medium" name="Phone"></div>
+						<div><input type="text" value="<?php echo $row['companyEmail']; ?>" maxlength="255" class="element text medium" name="companyEmail"></div>
 						<p class="guidelines"><small>aw</small></p> 
 						</li>	
 	
 						<li class="">
 						<label class="description">Kontak Anda </label>
-						<div><input type="text" value="<?php echo $row['companyPhone']; ?>" maxlength="255" class="element text medium" name="Phone"></div>
+						<div><input type="text" value="<?php echo $row['companyPhone']; ?>" maxlength="255" class="element text medium" name="companyPhone"></div>
 						<p class="guidelines"><small>deskripsi tentang telphon</small></p> 
 						</li>		
 	
