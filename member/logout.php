@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "../app.php";
 include $basepath . "inc/functions.php";
 

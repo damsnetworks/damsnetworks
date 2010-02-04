@@ -21,12 +21,12 @@ if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 	
 }
 // JIKA BELUM LOGIN
-elseif(!empty($_POST['loginname']) && !empty($_POST['password']))
+elseif(!empty($_POST['username']) && !empty($_POST['password']))
 {
-	$loginname = sanitize($_POST['loginname']);
+	$username = sanitize($_POST['username']);
 	$password = sanitize($_POST['password']);
 	 
-	$query = "SELECT cid, loginname, password FROM company WHERE loginname = '".$loginname."'";
+	$query = "SELECT cid, username, password FROM company WHERE username = '".$username."'";
 	$row = $db->GetRow($query);
 
 	// Apabila username dan password ditemukan
@@ -38,7 +38,7 @@ elseif(!empty($_POST['loginname']) && !empty($_POST['password']))
 		if ($hash->CheckPassword($_POST['password'], $row['password']))
 		{
 
-			$_SESSION['sUsername'] = $loginname;
+			$_SESSION['sUsername'] = $username;
 			$_SESSION['sLogin'] = 1;
 			$_SESSION['sCid'] = $row['cid'];
 

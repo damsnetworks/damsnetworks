@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "../app.php";
 include $basepath . "inc/PasswordHash.php";
 include $basepath . "inc/functions.php";
@@ -6,7 +6,7 @@ include $basepath . "inc/adodb5/adodb.inc.php";
 
 // Session Start
 $adodbsessionstart = new UADODB;
-$adodbsessionstart->adodbSessionStart(); 
+$adodbsessionstart->adodbSessionStart();
 
 // Session Check
 loginCheck();
@@ -17,16 +17,15 @@ $db = ADONewConnection($dbtype);
 $db->debug = true;
 $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 
-$query = "SELECT cid, ownerFn, ownerLn, companyPhone, companyAddress, companyEmail, introduction FROM company WHERE cid = '".$cid."'";
+$query = "SELECT cid, ownerFn, ownerLn, companyPhone, companyAddress, companyEmail, companyName FROM company WHERE cid = '".$cid."'";
 $row = $db->GetRow($query);
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	"http://www.w3.org/TR/xhg/1999/xhtml" xml:lang="en">
 <head>
 	<title>Bisnisku - Indonesian best marketplace</title>
-	<meta name="description" content="bisnis indonesia profile perusahaan informasi" />	
+	<meta name="description" content="bisnis indonesia profile perusahaan informasi" />
 	<link rel="stylesheet" href="../media/css/base.css" type="text/css" />
 	<link rel="stylesheet" href="../media/css/admin.css" type="text/css" />
 	<script src="view.js" type="text/javascript"></script>
@@ -45,6 +44,7 @@ $row = $db->GetRow($query);
 			<!--END mwarp-->
 		</div>
 	</div>
+	
 <div class="admincontrolprofileedit">
 <?php $showAnnouncement = new INFO();$showAnnouncement->what('editprofile'); ?>
 					<div class="admincontrolprofileeditleft">
@@ -78,13 +78,13 @@ $row = $db->GetRow($query);
 						<li class="">
 						<label class="description">Pengumuman</label>
 						<div><textarea class="element textarea medium" name="pengumuman">$Pengumuman untuk pembeli ( halaman profile )</textarea></div>
-						<p class="guidelines"><small>23</small></p> 
+						<p class="guidelines"><small>23</small></p>
 						</li>
-	
+
 						<li class="">
 						<label class="description">Tentang Bisnis Anda </label>
-						<div><textarea class="element textarea medium" name="introduction"><?php echo $row['introduction']; ?></textarea></div>
-						<p class="guidelines"><small>deskripsi tentang bisnis anda</small></p> 
+						<div><textarea class="element textarea medium" name="companyName"><?php echo $row['companyName']; ?></textarea></div>
+						<p class="guidelines"><small>deskripsi tentang bisnis anda</small></p>
 						</li>
 	
 						<li class="">
