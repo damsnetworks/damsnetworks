@@ -25,4 +25,6 @@ $dbpwd 		= '';
 
 // include file
 
-// end of file
+// end of file 
+
+?>
