@@ -6,7 +6,6 @@ lists:
 - validasi email
 - validasi url
 - send email
-
 */
 
 /*
