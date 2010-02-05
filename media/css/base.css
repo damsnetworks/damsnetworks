@@ -141,7 +141,7 @@ input.button_text{overflow:visible;padding:0 7px;width:auto}
 .buttons input{font-size:120%;margin-right:5px}
 label.description{border:none;color:#222;display:block;font-size:95%;line-height:150%;padding:0 0 1px}
 span.symbol{font-size:115%;line-height:130%}
-input.text{background:#fff url(../../../images/shadow.gif) repeat-x top;border-bottom:1px solid #ddd;border-left:1px solid #c3c3c3;border-right:1px solid #c3c3c3;border-top:1px solid #7c7c7c;color:#333;font-size:100%;margin:0;padding:2px 0}
+input.text{background:#fff url(../../../images/shadow.gif) repeat-x top;border-bottom:1px solid #ddd;border-left:1px solid #c3c3c3;border-right:1px solid #c3c3c3;border-top:1px solid #7c7c7c;color:#333;font-size:100%;margin:0;padding:5px}
 input.file{color:#333;font-size:100%;margin:0;padding:2px 0}
 textarea.textarea{background:#fff url(../../../images/shadow.gif) repeat-x top;border-bottom:1px solid #ddd;border-left:1px solid #c3c3c3;border-right:1px solid #c3c3c3;border-top:1px solid #7c7c7c;color:#333;font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;font-size:100%;margin:0;width:99%}
 select.select{background:#fff url(../../../images/shadow.gif) repeat-x top;border-bottom:1px solid #ddd;border-left:1px solid #c3c3c3;border-right:1px solid #c3c3c3;border-top:1px solid #7c7c7c;color:#333;font-size:100%;margin:1px 0;padding:1px 0 0}

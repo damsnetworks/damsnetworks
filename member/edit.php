@@ -61,32 +61,39 @@ $row = $db->GetRow($query);
 							</ul>	
 							</div>
 					</div>
-					
+
 					<div class="admincontrolprofileeditright">
 					<form action="update.php" method="post" class="theform">
 						<ul>
-	
+
+                        <li class="">
+						<label class="description">Nama Usaha</label>
+						<div><input type="text" value="<?php echo $row['companyName']; ?>" maxlength="255" class="element text medium" name="companyName"></div>
+						<p class="guidelines"><small>aw</small></p>
+						</li>
+
 						</li><li class="">
 						<label class="description">Nama Pemilik</label>
 						<span><input value="<?php echo $row['ownerFn']; ?>" size="20" maxlength="255" class="element text" name="OwnerFn">
 						<label>First</label></span>
 						<span><input value="<?php echo $row['ownerLn']; ?>" size="30" maxlength="255" class="element text" name="OwnerLn">
 						<label>Last</label></span>
-						<p class="guidelines"><small>23</small></p> 
-						</li>
-	
-						<li class="">
-						<label class="description">Pengumuman</label>
-						<div><textarea class="element textarea medium" name="pengumuman">$Pengumuman untuk pembeli ( halaman profile )</textarea></div>
 						<p class="guidelines"><small>23</small></p>
 						</li>
 
 						<li class="">
-						<label class="description">Tentang Bisnis Anda </label>
-						<div><textarea class="element textarea medium" name="companyName"><?php echo $row['companyName']; ?></textarea></div>
-						<p class="guidelines"><small>deskripsi tentang bisnis anda</small></p>
+						<label class="description">Pengumuman</label>
+						<div><textarea class="element textarea medium" name="pengumuman">{pengumuman}company.content company.post where company.user=content.user, postcat=2</textarea></div>
+						<p class="guidelines"><small>23</small></p>
 						</li>
-	
+
+
+						<li class="">
+						<label class="description">Tentang Bisnis Anda</label>
+						<div><textarea class="element textarea medium" name="introduction">{introduction}company.content company.post where company.user=content.user, postcat=1</textarea></div>
+						<p class="guidelines"><small>23</small></p>
+						</li>
+
 						<li class="">
 						<label class="description">Alamat Bisnis Anda </label>
 						<div><textarea class="element textarea medium" name="companyAddress"><?php echo $row['companyAddress']; ?></textarea></div>
@@ -96,8 +103,8 @@ $row = $db->GetRow($query);
 						<li class="">
 						<label class="description">Email Anda</label>
 						<div><input type="text" value="<?php echo $row['companyEmail']; ?>" maxlength="255" class="element text medium" name="companyEmail"></div>
-						<p class="guidelines"><small>aw</small></p> 
-						</li>	
+						<p class="guidelines"><small>aw</small></p>
+						</li>
 	
 						<li class="">
 						<label class="description">Kontak Anda </label>
