@@ -1,6 +1,8 @@
-<?php 
+<?php
 include "../inc/functions.php";
-
+// Session Start
+$adodbsessionstart = new UADODB;
+$adodbsessionstart->adodbSessionStart();
 // Session Check
 loginCheck();
 ?>
