@@ -17,7 +17,7 @@ $db = ADONewConnection($dbtype);
 $db->debug = true;
 $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 
-$query = "SELECT company.cid, company.ownerFn, company.ownerLn, company.companyPhone, company.companyAddress, company.companyEmail, company.companyName FROM company, content WHERE company.username = content.username";
+$query = "SELECT company.cid, company.ownerFn, company.ownerLn, company.companyPhone, company.companyAddress, company.companyEmail, company.companyName, content.announcement, content.introduction FROM company, content WHERE company.username = '".$username."'  AND content.username = company.username";
 $row = $db->GetRow($query);
 
 ?>
@@ -83,35 +83,35 @@ $row = $db->GetRow($query);
 
 						<li class="">
 						<label class="description">Pengumuman</label>
-						<div><textarea class="element textarea medium" name="pengumuman">{pengumuman}company.content company.post where company.user=content.user, postcat=2</textarea></div>
+						<div><textarea class="element textarea medium" name="pengumuman"><?php echo $row['announcement']; ?></textarea></div>
 						<p class="guidelines"><small>23</small></p>
 						</li>
 
 
 						<li class="">
 						<label class="description">Tentang Bisnis Anda</label>
-						<div><textarea class="element textarea medium" name="introduction">{introduction}company.content company.post where company.user=content.user, postcat=1</textarea></div>
+						<div><textarea class="element textarea medium" name="introduction"><?php echo $row['introduction']; ?></textarea></div>
 						<p class="guidelines"><small>23</small></p>
 						</li>
 
 						<li class="">
 						<label class="description">Alamat Bisnis Anda </label>
 						<div><textarea class="element textarea medium" name="companyAddress"><?php echo $row['companyAddress']; ?></textarea></div>
-						<p class="guidelines"><small>$alamat yang disimpan didatabase</small></p> 
+						<p class="guidelines"><small>$alamat yang disimpan didatabase</small></p>
 						</li>
-	
+
 						<li class="">
 						<label class="description">Email Anda</label>
 						<div><input type="text" value="<?php echo $row['companyEmail']; ?>" maxlength="255" class="element text medium" name="companyEmail"></div>
 						<p class="guidelines"><small>aw</small></p>
 						</li>
-	
+
 						<li class="">
 						<label class="description">Kontak Anda </label>
 						<div><input type="text" value="<?php echo $row['companyPhone']; ?>" maxlength="255" class="element text medium" name="companyPhone"></div>
-						<p class="guidelines"><small>deskripsi tentang telphon</small></p> 
-						</li>		
-	
+						<p class="guidelines"><small>deskripsi tentang telphon</small></p>
+						</li>
+
 								<li class="buttons">
 								<input type="hidden" value="" name="" >
 								<input type="submit" value="Edit Profile" name="submit" class="button_text">
@@ -129,6 +129,6 @@ $row = $db->GetRow($query);
 
 </div>
 
-	
+
 </body>
 </html>
