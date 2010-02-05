@@ -41,8 +41,9 @@ CREATE  TABLE IF NOT EXISTS `dams`.`company` (
 CREATE  TABLE IF NOT EXISTS `dams`.`content` (
   `PID` INT(25) NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(60) NOT NULL ,
-  `postCat` TINYINT(1) NOT NULL ,
-  `posts` LONGTEXT NOT NULL ,
+  `introduction` TEXT NULL ,
+  `announcement` TEXT NULL ,
+  `template` TEXT NULL ,
   PRIMARY KEY (`PID`) ,
   INDEX `username` (`username` ASC) )
   ENGINE = MyISAM DEFAULT CHARACTER SET = utf8;
@@ -53,10 +54,11 @@ CREATE  TABLE IF NOT EXISTS `dams`.`content` (
 CREATE  TABLE IF NOT EXISTS `dams`.`product` (
   `RID` INT NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(60) NOT NULL ,
+  `productname` VARCHAR(60) NOT NULL,
   `image` VARCHAR(255) NOT NULL ,
-  `what` TEXT NULL ,
+  `what` TEXT NOT NULL ,
   `price` INT(50) NOT NULL ,
-  `prodCat` TINYINT(1) NOT NULL ,
+  `tag` VARCHAR(60) NOT NULL ,
   PRIMARY KEY (`RID`) ,
   INDEX `username` (`username` ASC) )
   ENGINE = MyISAM DEFAULT CHARACTER SET = utf8;
