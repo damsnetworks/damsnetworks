@@ -18,14 +18,14 @@ if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 
 // THEME CONTROL 1
 	include $basepath . "member/style/approved/message.php";
-	
+
 }
 // JIKA BELUM LOGIN
 elseif(!empty($_POST['username']) && !empty($_POST['password']))
 {
 	$username = sanitize($_POST['username']);
 	$password = sanitize($_POST['password']);
-	 
+
 	$query = "SELECT cid, username, password FROM company WHERE username = '".$username."'";
 	$row = $db->GetRow($query);
 
@@ -34,11 +34,12 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
 	{
 		// cek password
 		$hash = new PasswordHash(8, FALSE);
-		
+
 		if ($hash->CheckPassword($_POST['password'], $row['password']))
 		{
 
-			$_SESSION['sUsername'] = $username;
+            //$username = $row['username']
+			$_SESSION['sUsername'] = $row['username'];
 			$_SESSION['sLogin'] = 1;
 			$_SESSION['sCid'] = $row['cid'];
 
@@ -53,15 +54,15 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
 			//todo: login attempt
 			echo "<center>GATOT1!<br>";
 			echo "<a href='index.php'><b>ULANGI LAGI</b></a></center>";
-		}  
+		}
 	}
-	
+
 	else
 	{
 		echo "<center>GATOT2!<br>";
 		echo "<a href='index.php'><b>ULANGI LAGI</b></a></center>";
 	}
-	
+
 }
 else
 {
@@ -70,4 +71,4 @@ else
 	include $basepath . "member/style/default/login.php";
 }
 
-
+?>

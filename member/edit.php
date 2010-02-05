@@ -11,13 +11,13 @@ $adodbsessionstart->adodbSessionStart();
 // Session Check
 loginCheck();
 
-$cid = (int) $_SESSION['sCid'];
+$username = $_SESSION['sUsername'];
 
 $db = ADONewConnection($dbtype);
 $db->debug = true;
 $db->Connect($dbhost, $dbuser, $dbpwd, $dbname);
 
-$query = "SELECT cid, ownerFn, ownerLn, companyPhone, companyAddress, companyEmail, companyName FROM company WHERE cid = '".$cid."'";
+$query = "SELECT company.cid, company.ownerFn, company.ownerLn, company.companyPhone, company.companyAddress, company.companyEmail, company.companyName FROM company, content WHERE company.username = content.username";
 $row = $db->GetRow($query);
 
 ?>
@@ -44,7 +44,7 @@ $row = $db->GetRow($query);
 			<!--END mwarp-->
 		</div>
 	</div>
-	
+
 <div class="admincontrolprofileedit">
 <?php $showAnnouncement = new INFO();$showAnnouncement->what('editprofile'); ?>
 					<div class="admincontrolprofileeditleft">
@@ -58,7 +58,7 @@ $row = $db->GetRow($query);
 								<li class="profiletema sepver">Theme</li>
 								<li class="profileIM sepver">IM</li>
 								<li class="profiledelete sepver">Delete</li>
-							</ul>	
+							</ul>
 							</div>
 					</div>
 
