@@ -30,6 +30,7 @@
 				<label class="description">ID Password </label>
 				<div><input type="password" value="" maxlength="100" class="element text big" name="password"></div>
 				<p id="guide_2" class="guidelines"><small>Masukan kata kunci anda, usahakan lakukan pengabungan antara text dan angka untuk keamanan lebih.</small></p>
+                </li>
 
 				<li class="buttons">
 				<input type="submit" class="button_text" name="submit" value="LOGIN">

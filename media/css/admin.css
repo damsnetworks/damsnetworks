@@ -23,11 +23,10 @@ form{margin:0 0 18px}
 .admincontrolprofileeditleft li{list-style:none;}
 .profilepicedit{background:none repeat scroll 0 0 #ccc;height:250px;width:180px;}
 
-
-.profileupgrade{background:none repeat scroll 0 0 #708090;color:#FFFFFF;padding:5px;}
-.profiletema{background:none repeat scroll 0 0 #708090;color:#FFFFFF;padding:5px;}
-.profiledelete{background:none repeat scroll 0 0 #708090;color:#FFFFFF;padding:5px;}
-.profileIM{background:none repeat scroll 0 0 #708090;color:#FFFFFF;padding:5px;}
+.profilebox{text-align:center;}
+.profilebox a{background:none repeat scroll 0 0 inactiveborder;color:#444444;display:block;height:20px;padding:10px 0;width:180px;}
+.profilebox a:hover{background:#CCC;text-decoration:none;}
+.profilebox h3{padding:0px;]}
 
 .producttambah{background:none repeat scroll 0 0 #708090;color:#FFFFFF;padding:5px;}
 .productlist{background:none repeat scroll 0 0 #708090;color:#FFFFFF;padding:5px;}

@@ -8,6 +8,7 @@ lists:
 - send email
 */
 
+
 /*
 Class UADODB(unite adodb)
 Class ini digunakan untuk mempermudah integrasi antara adodb
@@ -32,7 +33,7 @@ class UADODB
 		global $basepath,$dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options;
 		// include the uadodb api
 		include_once($basepath . "inc/adodb5/session/adodb-session2.php");
-		
+
         // start adodbsession engine
         $options['table'] = 'adodbsessions';
 		ADOdb_Session::config($dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options);
