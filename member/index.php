@@ -17,7 +17,7 @@ if(!empty($_SESSION['sLogin']) && !empty($_SESSION['sUsername']))
 {
 
 // THEME CONTROL 1
-	include $basepath . "member/style/approved/message.php";
+	include $basepath . "member/template/login/approved/message.php";
 
 }
 // JIKA BELUM LOGIN
@@ -68,7 +68,7 @@ else
 {
 
 // THEME CONTROL 2
-	include $basepath . "member/style/default/login.php";
+	include $basepath . "member/template/login/default/login.php";
 }
 
 ?>

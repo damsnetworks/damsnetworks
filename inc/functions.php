@@ -33,7 +33,8 @@ class UADODB
 		// include the uadodb api
 		include_once($basepath . "inc/adodb5/session/adodb-session2.php");
 		
-		$options['table'] = 'adodbsessions';
+        // start adodbsession engine
+        $options['table'] = 'adodbsessions';
 		ADOdb_Session::config($dbtype, $dbhost, $dbuser, $dbpwd, $dbname, $options);
 		session_start();
 		if ((rand()%10) == 0) adodb_session_regenerate_id(); 

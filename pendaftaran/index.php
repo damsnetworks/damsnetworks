@@ -56,8 +56,8 @@ $partnership    = $_POST['partnership'];
 
 	if (!sizeof($error))
 	{
-	    ;
-		$data['username'] 		= $username;
+        $data['username'] 		= $username;
+        $datauser['username'] 	= $username;
 		$data['password'] 		= $password;
         $data['companyName']    = $companyName;
 		$data['OwnerFn'] 		= $OwnerFn;
@@ -67,6 +67,8 @@ $partnership    = $_POST['partnership'];
 
 		if($db->AutoExecute('company', $data, 'INSERT'))
 		{
+		    $db->AutoExecute('content', $datauser, 'INSERT');
+
 			$message = "Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.";
 		}
 		else
